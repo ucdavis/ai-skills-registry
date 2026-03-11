@@ -20,7 +20,7 @@ function readLocalJson<T>(filename: string): T | null {
 }
 
 export interface NativeInstallConfig {
-  strategy: 'dir' | 'commands-dir' | 'append';
+  strategy: 'dir' | 'commands-dir' | 'append' | 'skill-folder';
   dir?: string;
   commandsDir?: string;
   contextFile?: string;
