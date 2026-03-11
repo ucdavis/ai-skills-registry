@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { fetchRegistryIndex, fetchAgentsConfig, SkillManifest, NativeInstallConfig } from './list';
 
-const REMOTE_BASE_URL = 'https://raw.githubusercontent.com/tpa/ai-skills-registry/main';
+const REMOTE_BASE_URL = 'https://raw.githubusercontent.com/ucdavis/ai-skills-registry/main';
 
 // Skills are now at skills/<concept>/<language>/<file> (no agent in path)
 async function downloadSkillFiles(skill: SkillManifest): Promise<Record<string, string>> {

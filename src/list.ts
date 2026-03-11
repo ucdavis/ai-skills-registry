@@ -4,8 +4,8 @@ import ora from 'ora';
 import fs from 'fs';
 import path from 'path';
 
-const REMOTE_REGISTRY_URL = 'https://raw.githubusercontent.com/tpa/ai-skills-registry/main/skills.json';
-const REMOTE_AGENTS_URL = 'https://raw.githubusercontent.com/tpa/ai-skills-registry/main/agents.json';
+const REMOTE_REGISTRY_URL = 'https://raw.githubusercontent.com/ucdavis/ai-skills-registry/main/skills.json';
+const REMOTE_AGENTS_URL = 'https://raw.githubusercontent.com/ucdavis/ai-skills-registry/main/agents.json';
 
 function localPackagePath(filename: string): string {
   return path.join(__dirname, '..', filename);
