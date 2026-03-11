@@ -131,6 +131,25 @@
       "version": "1.0.0",
       "author": "tpa",
       "files": ["instructions.md"]
+    },
+    {
+      "id": "accessibility/react-native",
+      "concept": "accessibility",
+      "language": "react-native",
+      "category": "engineering",
+      "tags": ["a11y", "react-native", "expo", "ios", "android"],
+      "description": "Implement, audit, and fix accessibility (a11y) in React Native and Expo mobile apps.",
+      "version": "1.0.0",
+      "author": "anthropic",
+      "files": [
+        "SKILL.md",
+        "references/components.md",
+        "references/contrast.md",
+        "references/props.md",
+        "references/testing.md",
+        "scripts/audit.js",
+        "scripts/contrast-check.js"
+      ]
     }
   ]
 }

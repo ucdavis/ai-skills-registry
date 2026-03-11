@@ -51,10 +51,12 @@ function applyNativeInstall(
     const rootDir = nativeConfig.dir || '.agent/skills';
     const targetDir = path.join(cwd, rootDir, skill.concept);
     fs.mkdirSync(targetDir, { recursive: true });
-    const targetFile = path.join(targetDir, 'SKILL.md');
-    const combined = Object.values(fileContents).join('\n\n---\n\n');
-    fs.writeFileSync(targetFile, combined);
-    return targetFile;
+    for (const [filename, content] of Object.entries(fileContents)) {
+      const targetFilePath = path.join(targetDir, filename);
+      fs.mkdirSync(path.dirname(targetFilePath), { recursive: true });
+      fs.writeFileSync(targetFilePath, content);
+    }
+    return targetDir;
 
   } else {
     // dir strategy: <rootDir>/<agent>/<concept>/<language>/
@@ -62,7 +64,9 @@ function applyNativeInstall(
     const targetDir = path.join(cwd, rootDir, agent, skill.concept, skill.language);
     fs.mkdirSync(targetDir, { recursive: true });
     for (const [filename, content] of Object.entries(fileContents)) {
-      fs.writeFileSync(path.join(targetDir, filename), content);
+      const targetFilePath = path.join(targetDir, filename);
+      fs.mkdirSync(path.dirname(targetFilePath), { recursive: true });
+      fs.writeFileSync(targetFilePath, content);
     }
     return targetDir;
   }
@@ -73,7 +77,9 @@ function applyDefaultInstall(skill: SkillManifest, agent: string, fileContents: 
   const targetDir = path.join(process.cwd(), '.ai-skills', agent, skill.concept, skill.language);
   fs.mkdirSync(targetDir, { recursive: true });
   for (const [filename, content] of Object.entries(fileContents)) {
-    fs.writeFileSync(path.join(targetDir, filename), content);
+    const targetFilePath = path.join(targetDir, filename);
+    fs.mkdirSync(path.dirname(targetFilePath), { recursive: true });
+    fs.writeFileSync(targetFilePath, content);
   }
   return targetDir;
 }
