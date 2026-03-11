@@ -1,0 +1,37 @@
+{
+  "agents": {
+    "antigravity": {
+      "label": "Google Antigravity",
+      "description": "Google's AI coding assistant",
+      "nativeInstall": {
+        "strategy": "dir",
+        "dir": ".ai-skills/antigravity"
+      }
+    },
+    "claude-code": {
+      "label": "Claude Code",
+      "description": "Anthropic's AI coding CLI",
+      "nativeInstall": {
+        "strategy": "commands-dir",
+        "commandsDir": ".claude/commands",
+        "contextFile": ".claude/CLAUDE.md"
+      }
+    },
+    "cursor": {
+      "label": "Cursor",
+      "description": "Cursor AI-powered editor",
+      "nativeInstall": {
+        "strategy": "append",
+        "file": ".cursorrules"
+      }
+    },
+    "vsc": {
+      "label": "Visual Studio Code (Copilot)",
+      "description": "GitHub Copilot in Visual Studio Code",
+      "nativeInstall": {
+        "strategy": "append",
+        "file": ".github/copilot-instructions.md"
+      }
+    }
+  }
+}

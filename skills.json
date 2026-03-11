@@ -1,0 +1,136 @@
+{
+  "skills": [
+    {
+      "id": "testing/general",
+      "concept": "testing",
+      "language": "general",
+      "category": "engineering",
+      "tags": ["unit-testing", "boundaries", "null-safety", "tdd"],
+      "description": "Language-agnostic testing principles: boundary assertions, null checks, and behavior-driven test naming",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["instructions.md"]
+    },
+    {
+      "id": "testing/typescript",
+      "concept": "testing",
+      "language": "typescript",
+      "category": "engineering",
+      "tags": ["vitest", "jest", "tdd", "mocking", "coverage"],
+      "description": "TypeScript testing with Vitest/Jest: file structure, mocking strategy, async patterns, and coverage targets",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["instructions.md"]
+    },
+    {
+      "id": "testing/python",
+      "concept": "testing",
+      "language": "python",
+      "category": "engineering",
+      "tags": ["pytest", "unittest", "mocking", "fixtures", "tdd"],
+      "description": "Python testing with pytest: fixtures, parametrize, mocking with unittest.mock, and coverage",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["instructions.md"]
+    },
+    {
+      "id": "testing/java",
+      "concept": "testing",
+      "language": "java",
+      "category": "engineering",
+      "tags": ["junit", "mockito", "tdd", "integration-testing"],
+      "description": "Java testing with JUnit 5 and Mockito: test lifecycle, mocking, and integration test patterns",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["instructions.md"]
+    },
+    {
+      "id": "code-review/general",
+      "concept": "code-review",
+      "language": "general",
+      "category": "engineering",
+      "tags": ["review", "best-practices", "security", "readability", "performance"],
+      "description": "General code review process: priority ordering, what to block on, how to give actionable feedback",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["instructions.md"]
+    },
+    {
+      "id": "code-review/java",
+      "concept": "code-review",
+      "language": "java",
+      "category": "engineering",
+      "tags": ["owasp", "concurrency", "memory", "immutability", "security"],
+      "description": "Java code review: memory leaks, concurrency, OWASP top 10, and immutability best practices",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["instructions.md"]
+    },
+    {
+      "id": "refactoring/typescript",
+      "concept": "refactoring",
+      "language": "typescript",
+      "category": "engineering",
+      "tags": ["typescript", "clean-code", "dry", "solid", "type-safety"],
+      "description": "TypeScript refactoring: SOLID principles, DRY, type safety improvements, and eliminating code smells",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["instructions.md"]
+    },
+    {
+      "id": "git-workflow/general",
+      "concept": "git-workflow",
+      "language": "general",
+      "category": "engineering",
+      "tags": ["git", "commits", "branching", "pr", "conventional-commits"],
+      "description": "Git workflow: branch naming, conventional commits, PR conventions, and merge strategies",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["instructions.md"]
+    },
+    {
+      "id": "security/general",
+      "concept": "security",
+      "language": "general",
+      "category": "security",
+      "tags": ["owasp", "injection", "xss", "secrets", "auth", "input-validation"],
+      "description": "Security checklist: OWASP top 10, secret scanning, input validation, and auth patterns",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["instructions.md"]
+    },
+    {
+      "id": "architecture/general",
+      "concept": "architecture",
+      "language": "general",
+      "category": "architecture",
+      "tags": ["design-patterns", "microservices", "clean-architecture", "ddd", "solid"],
+      "description": "Architecture decisions: layering, design patterns, microservices trade-offs, and domain-driven design",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["instructions.md"]
+    },
+    {
+      "id": "architecture/python",
+      "concept": "architecture",
+      "language": "python",
+      "category": "architecture",
+      "tags": ["pep8", "design-patterns", "separation-of-concerns", "clean-architecture", "mypy"],
+      "description": "Python architecture: PEP-8, type hints, clean layering, dependency injection, and testing strategy",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["instructions.md"]
+    },
+    {
+      "id": "data-science/python",
+      "concept": "data-science",
+      "language": "python",
+      "category": "data",
+      "tags": ["pandas", "numpy", "jupyter", "sklearn", "reproducibility", "data-validation"],
+      "description": "Python data science: notebook structure, data validation, reproducibility, and model documentation",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["instructions.md"]
+    }
+  ]
+}
