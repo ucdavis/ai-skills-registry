@@ -4,8 +4,8 @@
       "label": "Google Antigravity",
       "description": "Google's AI coding assistant",
       "nativeInstall": {
-        "strategy": "dir",
-        "dir": ".agent"
+        "strategy": "commands-dir",
+        "commandsDir": ".agent/skills"
       }
     },
     "claude-code": {

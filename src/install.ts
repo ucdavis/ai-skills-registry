@@ -48,8 +48,9 @@ function applyNativeInstall(
     return targetFile;
 
   } else {
-    // dir strategy: .ai-skills/<agent>/<concept>/<language>/
-    const targetDir = path.join(cwd, '.ai-skills', agent, skill.concept, skill.language);
+    // dir strategy: <rootDir>/<agent>/<concept>/<language>/
+    const rootDir = (nativeConfig.strategy === 'dir' && nativeConfig.dir) ? nativeConfig.dir : '.ai-skills';
+    const targetDir = path.join(cwd, rootDir, agent, skill.concept, skill.language);
     fs.mkdirSync(targetDir, { recursive: true });
     for (const [filename, content] of Object.entries(fileContents)) {
       fs.writeFileSync(path.join(targetDir, filename), content);
