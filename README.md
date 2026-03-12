@@ -92,10 +92,9 @@ ai-skills install-all --native
 ```json
 {
   "skills": [
-    { "id": "testing/typescript", "agent": "claude-code" },
-    { "id": "git-workflow/general", "agent": "vsc" },
-    { "id": "testing/general", "agent": "cursor" },
-    { "id": "architecture/python", "agent": "antigravity" }
+    { "id": "testing/typescript" },
+    { "id": "git-workflow/general" },
+    { "id": "architecture/python", "agent": "claude-code" }
   ]
 }
 ```

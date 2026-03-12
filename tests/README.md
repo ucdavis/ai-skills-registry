@@ -100,6 +100,8 @@ npm test
 | Test | Command | What it checks |
 |------|---------|----------------|
 | Standard install | `ai-skills install-all` | Installs `testing/general` and `refactoring/typescript` for antigravity |
+| Without agent | `ai-skills install-all` | Lockfile with no agent installs skills to `.ai-skills/default/` |
+| Native without agent | `ai-skills install-all --native` | Fails gracefully if `--native` is set but `agent` is missing from the lockfile |
 | Native install | `ai-skills install-all --native` | Installs `git-workflow` and `architecture` to `.claude/commands/` |
 
 ## Environment variables

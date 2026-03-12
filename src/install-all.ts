@@ -6,7 +6,7 @@ import { installSkill } from './install';
 
 export interface SkillsLockfileEntry {
   id: string;       // "<concept>/<language>"
-  agent: string;    // which agent to install for
+  agent?: string;   // which agent to install for (required for --native)
   version?: string;
 }
 
@@ -24,8 +24,7 @@ export async function installAll(native: boolean = false) {
     console.log(chalk.yellow(`Create one with your desired skills, e.g.:\n`));
     console.log(chalk.dim(`{
   "skills": [
-    { "id": "testing/typescript", "agent": "claude-code" },
-    { "id": "testing/general",    "agent": "vsc" },
+    { "id": "testing/typescript" },
     { "id": "git-workflow/general", "agent": "claude-code" }
   ]
 }`));
@@ -47,6 +46,12 @@ export async function installAll(native: boolean = false) {
   let failCount = 0;
 
   for (const entry of lockfile.skills) {
+    if (native && !entry.agent) {
+      console.error(chalk.red(`  ✗ Skill '${entry.id}' requires an 'agent' property in ${LOCKFILE_NAME} for native installation.`));
+      failCount++;
+      continue;
+    }
+
     const skill = index.skills.find(s => s.id === entry.id);
     if (!skill) {
       console.error(chalk.red(`  ✗ Skill not found: '${entry.id}'`));
@@ -54,7 +59,8 @@ export async function installAll(native: boolean = false) {
       continue;
     }
     try {
-      await installSkill(skill.concept, entry.agent, skill.language, native);
+      const agentTarget = entry.agent || 'default';
+      await installSkill(skill.concept, agentTarget, skill.language, native);
       successCount++;
     } catch {
       failCount++;
@@ -78,5 +84,5 @@ export function initLockfile() {
   fs.writeFileSync(lockfilePath, JSON.stringify(template, null, 2) + '\n');
   console.log(chalk.green(`Created ${LOCKFILE_NAME}`));
   console.log(chalk.dim('Add entries to the "skills" array, then run: ai-skills install-all'));
-  console.log(chalk.dim('Each entry needs an "id" (e.g. "testing/typescript") and an "agent" (e.g. "claude-code").'));
+  console.log(chalk.dim('Each entry needs an "id" (e.g. "testing/typescript"). The "agent" field is only required if you pass --native (e.g. "claude-code").'));
 }

@@ -343,6 +343,29 @@ describe('ai-skills CLI E2E', () => {
       expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'refactoring', 'typescript', 'SKILL.md'))).toBe(true);
     });
 
+    it('installs skills without agent to default folder', () => {
+      fs.writeFileSync(path.join(TEST_DIR, '.ai-skills.json'), JSON.stringify({
+        skills: [
+          { id: "security/general" }
+        ]
+      }));
+      runCli('install-all');
+      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'default', 'security', 'general', 'SKILL.md'))).toBe(true);
+    });
+
+    it('--native fails gracefully if agent is missing', () => {
+      fs.writeFileSync(path.join(TEST_DIR, '.ai-skills.json'), JSON.stringify({
+        skills: [
+          { id: "git-workflow/general" }
+        ]
+      }));
+      const env = { ...process.env, AI_SKILLS_REGISTRY_URL: REGISTRY_URL, AI_SKILLS_REPO_URL: REPO_URL };
+      const { spawnSync } = require('child_process');
+      const result = spawnSync('node', [CLI_PATH, 'install-all', '--native'], { env, cwd: TEST_DIR, encoding: 'utf-8' });
+      const out = (result.stdout || '') + (result.stderr || '');
+      expect(out).toContain('requires an \'agent\' property');
+    });
+
     it('--native installs skills to native locations', () => {
       fs.writeFileSync(path.join(TEST_DIR, '.ai-skills.json'), JSON.stringify({
         skills: [
