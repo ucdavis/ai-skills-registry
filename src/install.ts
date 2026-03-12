@@ -72,9 +72,9 @@ function applyNativeInstall(
   }
 }
 
-function applyDefaultInstall(skill: SkillManifest, agent: string, fileContents: Record<string, string>): string {
-  // Default: .ai-skills/<agent>/<concept>/<language>/
-  const targetDir = path.join(process.cwd(), '.ai-skills', agent, skill.concept, skill.language);
+function applyDefaultInstall(skill: SkillManifest, fileContents: Record<string, string>): string {
+  // Default: .ai-skills/<concept>/<language>/
+  const targetDir = path.join(process.cwd(), '.ai-skills', skill.concept, skill.language);
   fs.mkdirSync(targetDir, { recursive: true });
   for (const [filename, content] of Object.entries(fileContents)) {
     const targetFilePath = path.join(targetDir, filename);
@@ -84,7 +84,7 @@ function applyDefaultInstall(skill: SkillManifest, agent: string, fileContents: 
   return targetDir;
 }
 
-export async function installSkill(concept: string, agent: string, lang: string, native: boolean = false) {
+export async function installSkill(concept: string, agent: string | undefined, lang: string) {
   const [index, agentsConfig] = await Promise.all([
     fetchRegistryIndex(),
     fetchAgentsConfig(),
@@ -101,16 +101,20 @@ export async function installSkill(concept: string, agent: string, lang: string,
     process.exit(1);
   }
 
-  const spinner = ora(`Installing '${skill.id}' for ${agent}...`).start();
+  const spinnerMsg = agent ? `Installing '${skill.id}' for ${agent}...` : `Installing '${skill.id}'...`;
+  const spinner = ora(spinnerMsg).start();
 
   try {
     const fileContents = await downloadSkillFiles(skill);
 
     let installedAt: string;
-    if (native && agentsConfig.agents[agent]) {
+    if (agent && agentsConfig.agents[agent]) {
       installedAt = applyNativeInstall(skill, fileContents, agent, agentsConfig.agents[agent].nativeInstall);
+    } else if (agent) {
+       console.error(chalk.red(`\nUnknown agent: '${agent}'`));
+       process.exit(1);
     } else {
-      installedAt = applyDefaultInstall(skill, agent, fileContents);
+      installedAt = applyDefaultInstall(skill, fileContents);
     }
 
     spinner.succeed(chalk.green(`Installed '${skill.id}' → ${installedAt}`));

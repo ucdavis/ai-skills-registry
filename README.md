@@ -59,21 +59,24 @@ ai-skills info testing --lang typescript
 ai-skills info code-review --lang general
 ```
 
-### `install` — install a skill into your project
+### `install` — iInstall a specific skill into your project's `ai-skills` directory:
 
 ```bash
-# Default: installs to .ai-skills/<agent>/<lang>/<concept>/
-ai-skills install testing --agent claude-code --lang typescript
+ai-skills install testing --lang typescript
+ai-skills install security
+```
 
-# Native: installs to the agent's own config location
-ai-skills install testing --agent claude-code --lang typescript --native
-# → writes to .claude/commands/testing.md
+To install directly into an agent's specific native config location, provide the `--agent` argument:
 
-ai-skills install code-review --agent cursor --lang general --native
-# → appends to .cursorrules
+```bash
+# Appends to .cursorrules
+ai-skills install testing --agent cursor
 
-ai-skills install testing --agent vsc --lang general --native
-# → appends to .github/copilot-instructions.md
+# Creates .claude/commands/code-review.md
+ai-skills install code-review --agent claude-code
+
+# Appends to .agent/skills/git-workflow/
+ai-skills install git-workflow --agent antigravity
 ```
 
 ### `install-all` — restore from lockfile
@@ -81,10 +84,6 @@ ai-skills install testing --agent vsc --lang general --native
 ```bash
 # Create a lockfile
 ai-skills init
-
-# Edit .ai-skills.json, then install everything
-ai-skills install-all
-ai-skills install-all --native
 ```
 
 `.ai-skills.json` example:
@@ -93,10 +92,16 @@ ai-skills install-all --native
 {
   "skills": [
     { "id": "testing/typescript" },
-    { "id": "git-workflow/general" },
-    { "id": "architecture/python", "agent": "claude-code" }
+    { "id": "security/general" },
+    { "id": "git-workflow/general", "agent": "claude-code" }
   ]
 }
+```
+
+Then run `install-all` to download and apply them all at once. Skills with an `agent` specified will be installed natively for that agent. Skills without an agent will be installed in the default `.ai-skills` structure.
+
+```bash
+ai-skills install-all
 ```
 
 ---

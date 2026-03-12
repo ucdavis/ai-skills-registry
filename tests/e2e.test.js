@@ -234,82 +234,82 @@ describe('ai-skills CLI E2E', () => {
   // ── install (standard) ────────────────────────────────────────────────────
 
   describe('install (standard .ai-skills/)', () => {
-    it('testing --agent antigravity --lang python', () => {
-      runCli('install testing --agent antigravity --lang python');
-      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'testing', 'python', 'SKILL.md'))).toBe(true);
+    it('testing --lang python', () => {
+      runCli('install testing --lang python');
+      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'testing', 'python', 'SKILL.md'))).toBe(true);
     });
 
-    it('testing --agent antigravity --lang typescript', () => {
-      runCli('install testing --agent antigravity --lang typescript');
-      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'testing', 'typescript', 'SKILL.md'))).toBe(true);
+    it('testing --lang typescript', () => {
+      runCli('install testing --lang typescript');
+      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'testing', 'typescript', 'SKILL.md'))).toBe(true);
     });
 
-    it('security --agent antigravity', () => {
-      runCli('install security --agent antigravity');
-      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'security', 'general', 'SKILL.md'))).toBe(true);
+    it('security', () => {
+      runCli('install security');
+      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'security', 'general', 'SKILL.md'))).toBe(true);
     });
 
-    it('architecture --agent antigravity', () => {
-      runCli('install architecture --agent antigravity');
-      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'architecture', 'general', 'SKILL.md'))).toBe(true);
+    it('architecture', () => {
+      runCli('install architecture');
+      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'architecture', 'general', 'SKILL.md'))).toBe(true);
     });
 
-    it('data-science --agent antigravity --lang python', () => {
-      runCli('install data-science --agent antigravity --lang python');
-      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'data-science', 'python', 'SKILL.md'))).toBe(true);
+    it('data-science --lang python', () => {
+      runCli('install data-science --lang python');
+      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'data-science', 'python', 'SKILL.md'))).toBe(true);
     });
 
-    it('accessibility --agent antigravity --lang react-native', () => {
-      runCli('install accessibility --agent antigravity --lang react-native');
-      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'accessibility', 'react-native', 'SKILL.md'))).toBe(true);
+    it('accessibility --lang react-native', () => {
+      runCli('install accessibility --lang react-native');
+      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'accessibility', 'react-native', 'SKILL.md'))).toBe(true);
     });
 
-    it('package-management --agent antigravity --lang python', () => {
-      runCli('install package-management --agent antigravity --lang python');
-      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'package-management', 'python', 'SKILL.md'))).toBe(true);
+    it('package-management --lang python', () => {
+      runCli('install package-management --lang python');
+      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'package-management', 'python', 'SKILL.md'))).toBe(true);
     });
 
-    it('code-review --agent antigravity --lang python', () => {
-      runCli('install code-review --agent antigravity --lang python');
-      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'code-review', 'python', 'SKILL.md'))).toBe(true);
+    it('code-review --lang python', () => {
+      runCli('install code-review --lang python');
+      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'code-review', 'python', 'SKILL.md'))).toBe(true);
     });
   });
 
   // ── install (native) ──────────────────────────────────────────────────────
 
-  describe('install --native', () => {
+  describe('install with agent (native)', () => {
     it('cursor: appends to .cursorrules', () => {
-      runCli('install code-review --agent cursor --lang general --native');
+      runCli('install code-review --agent cursor --lang general');
       expect(fs.existsSync(path.join(TEST_DIR, '.cursorrules'))).toBe(true);
       const content = fs.readFileSync(path.join(TEST_DIR, '.cursorrules'), 'utf-8');
       expect(content).toContain('code-review');
     });
 
     it('cursor: appends multiple skills to .cursorrules', () => {
-      runCli('install security --agent cursor --native');
+      runCli('install security --agent cursor');
       const content = fs.readFileSync(path.join(TEST_DIR, '.cursorrules'), 'utf-8');
       expect(content).toContain('security');
     });
 
     it('claude-code: creates .claude/commands/<concept>.md', () => {
-      runCli('install security --agent claude-code --lang general --native');
+      runCli('install security --agent claude-code --lang general');
       expect(fs.existsSync(path.join(TEST_DIR, '.claude', 'commands', 'security.md'))).toBe(true);
     });
 
     it('claude-code: creates separate file per concept', () => {
-      runCli('install code-review --agent claude-code --native');
+      runCli('install code-review --agent claude-code');
       expect(fs.existsSync(path.join(TEST_DIR, '.claude', 'commands', 'code-review.md'))).toBe(true);
     });
 
     it('vsc: appends to .github/copilot-instructions.md', () => {
-      runCli('install git-workflow --agent vsc --native');
+      runCli('install git-workflow --agent vsc');
       expect(fs.existsSync(path.join(TEST_DIR, '.github', 'copilot-instructions.md'))).toBe(true);
       const content = fs.readFileSync(path.join(TEST_DIR, '.github', 'copilot-instructions.md'), 'utf-8');
       expect(content).toContain('git-workflow');
     });
 
     it('antigravity: installs to .agent/skills/<concept>/', () => {
-      runCli('install refactoring --agent antigravity --lang typescript --native');
+      runCli('install refactoring --agent antigravity --lang typescript');
       expect(fs.existsSync(path.join(TEST_DIR, '.agent', 'skills', 'refactoring'))).toBe(true);
     });
   });
@@ -331,7 +331,7 @@ describe('ai-skills CLI E2E', () => {
   // ── install-all ───────────────────────────────────────────────────────────
 
   describe('install-all', () => {
-    it('installs all skills from lockfile', () => {
+    it('installs skills with agent to native locations', () => {
       fs.writeFileSync(path.join(TEST_DIR, '.ai-skills.json'), JSON.stringify({
         skills: [
           { id: "testing/general", agent: "antigravity" },
@@ -339,8 +339,8 @@ describe('ai-skills CLI E2E', () => {
         ]
       }));
       runCli('install-all');
-      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'testing', 'general', 'SKILL.md'))).toBe(true);
-      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'refactoring', 'typescript', 'SKILL.md'))).toBe(true);
+      expect(fs.existsSync(path.join(TEST_DIR, '.agent', 'skills', 'testing', 'SKILL.md'))).toBe(true);
+      expect(fs.existsSync(path.join(TEST_DIR, '.agent', 'skills', 'refactoring', 'SKILL.md'))).toBe(true);
     });
 
     it('installs skills without agent to default folder', () => {
@@ -350,30 +350,17 @@ describe('ai-skills CLI E2E', () => {
         ]
       }));
       runCli('install-all');
-      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'default', 'security', 'general', 'SKILL.md'))).toBe(true);
+      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'security', 'general', 'SKILL.md'))).toBe(true);
     });
 
-    it('--native fails gracefully if agent is missing', () => {
-      fs.writeFileSync(path.join(TEST_DIR, '.ai-skills.json'), JSON.stringify({
-        skills: [
-          { id: "git-workflow/general" }
-        ]
-      }));
-      const env = { ...process.env, AI_SKILLS_REGISTRY_URL: REGISTRY_URL, AI_SKILLS_REPO_URL: REPO_URL };
-      const { spawnSync } = require('child_process');
-      const result = spawnSync('node', [CLI_PATH, 'install-all', '--native'], { env, cwd: TEST_DIR, encoding: 'utf-8' });
-      const out = (result.stdout || '') + (result.stderr || '');
-      expect(out).toContain('requires an \'agent\' property');
-    });
-
-    it('--native installs skills to native locations', () => {
+    it('installs skills to respective specific native locations', () => {
       fs.writeFileSync(path.join(TEST_DIR, '.ai-skills.json'), JSON.stringify({
         skills: [
           { id: "git-workflow/general", agent: "claude-code" },
           { id: "architecture/general", agent: "claude-code" }
         ]
       }));
-      runCli('install-all --native');
+      runCli('install-all');
       expect(fs.existsSync(path.join(TEST_DIR, '.claude', 'commands', 'git-workflow.md'))).toBe(true);
       expect(fs.existsSync(path.join(TEST_DIR, '.claude', 'commands', 'architecture.md'))).toBe(true);
     });

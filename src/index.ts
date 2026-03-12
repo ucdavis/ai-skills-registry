@@ -46,19 +46,17 @@ program
   .command('install')
   .description('Install a skill into the current project')
   .argument('<concept>', 'The concept to install (e.g. testing, code-review, git-workflow)')
-  .requiredOption('-a, --agent <agent>', 'Target agent (antigravity, claude-code, cursor, vsc)')
+  .option('-a, --agent <agent>', 'Target agent (antigravity, claude-code, cursor, vsc)')
   .option('-l, --lang <lang>', 'Language variant (default: general)', 'general')
-  .option('--native', "Install to the agent's native config location (.claude/commands/, .cursorrules, etc.)")
   .action(async (concept: string, options) => {
-    await installSkill(concept, options.agent, options.lang, options.native ?? false);
+    await installSkill(concept, options.agent, options.lang);
   });
 
 program
   .command('install-all')
   .description('Install all skills listed in .ai-skills.json lockfile')
-  .option('--native', "Install each skill to its agent's native config location")
-  .action(async (options) => {
-    await installAll(options.native ?? false);
+  .action(async () => {
+    await installAll();
   });
 
 program

@@ -16,7 +16,7 @@ export interface SkillsLockfile {
 
 const LOCKFILE_NAME = '.ai-skills.json';
 
-export async function installAll(native: boolean = false) {
+export async function installAll() {
   const lockfilePath = path.join(process.cwd(), LOCKFILE_NAME);
 
   if (!fs.existsSync(lockfilePath)) {
@@ -46,11 +46,6 @@ export async function installAll(native: boolean = false) {
   let failCount = 0;
 
   for (const entry of lockfile.skills) {
-    if (native && !entry.agent) {
-      console.error(chalk.red(`  ✗ Skill '${entry.id}' requires an 'agent' property in ${LOCKFILE_NAME} for native installation.`));
-      failCount++;
-      continue;
-    }
 
     const skill = index.skills.find(s => s.id === entry.id);
     if (!skill) {
@@ -59,8 +54,7 @@ export async function installAll(native: boolean = false) {
       continue;
     }
     try {
-      const agentTarget = entry.agent || 'default';
-      await installSkill(skill.concept, agentTarget, skill.language, native);
+      await installSkill(skill.concept, entry.agent, skill.language);
       successCount++;
     } catch {
       failCount++;
@@ -84,5 +78,5 @@ export function initLockfile() {
   fs.writeFileSync(lockfilePath, JSON.stringify(template, null, 2) + '\n');
   console.log(chalk.green(`Created ${LOCKFILE_NAME}`));
   console.log(chalk.dim('Add entries to the "skills" array, then run: ai-skills install-all'));
-  console.log(chalk.dim('Each entry needs an "id" (e.g. "testing/typescript"). The "agent" field is only required if you pass --native (e.g. "claude-code").'));
+  console.log(chalk.dim('Each entry needs an "id" (e.g. "testing/typescript"). The "agent" field is optional to install it native (e.g. "claude-code").'));
 }
