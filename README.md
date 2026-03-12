@@ -109,7 +109,7 @@ ai-skills install-all --native
 | `claude-code` | Slash command | `.claude/commands/<concept>.md` |
 | `cursor` | Append | `.cursorrules` |
 | `vsc` | Append | `.github/copilot-instructions.md` |
-| `antigravity` | Directory | `.ai-skills/antigravity/<lang>/<concept>/` |
+| `antigravity` | Skill folder | `.agent/skills/<concept>/` |
 
 ---
 
