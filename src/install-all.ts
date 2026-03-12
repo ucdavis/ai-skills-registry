@@ -6,7 +6,7 @@ import { installSkill } from './install';
 
 export interface SkillsLockfileEntry {
   id: string;       // "<concept>/<language>"
-  agent?: string;   // which agent to install for (required for --native)
+  agent?: string;   // which agent to install for (optional, natively installs if given)
   version?: string;
 }
 

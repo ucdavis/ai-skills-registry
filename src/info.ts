@@ -41,8 +41,8 @@ export async function showSkillInfo(concept: string, lang: string) {
       else nativePath = `.ai-skills/${agentId}/${skill.concept}/${skill.language}/`;
 
       console.log(`\n    ${chalk.blue(agentConfig.label)}`);
-      console.log(`      default: ${chalk.dim(`ai-skills install ${skill.concept} --agent ${agentId} --lang ${skill.language}`)}`);
-      console.log(`      native:  ${chalk.dim(`ai-skills install ${skill.concept} --agent ${agentId} --lang ${skill.language} --native`)} → ${chalk.gray(nativePath)}`);
+      console.log(`      default: ${chalk.dim(`ai-skills install ${skill.concept} --lang ${skill.language}`)}`);
+      console.log(`      native:  ${chalk.dim(`ai-skills install ${skill.concept} --agent ${agentId} --lang ${skill.language}`)} → ${chalk.gray(nativePath)}`);
     }
   }
   console.log();
