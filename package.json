@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "test": "node tests/e2e.test.js"
+    "test": "vitest run tests/e2e.test.js"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +23,8 @@
     "ora": "^9.3.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "vitest": "^4.0.18"
   }
 }
