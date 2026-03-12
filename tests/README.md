@@ -32,7 +32,7 @@ npm test
 |------|---------|----------------|
 | All skills | `ai-skills list` | Output includes `testing`, `architecture`, `security`, `code-review` |
 | Filter by lang | `ai-skills list --lang typescript` | Shows `testing`, `refactoring` |
-| Filter by lang | `ai-skills list --lang python` | Shows `testing`, `architecture`, `data-science` |
+| Filter by lang | `ai-skills list --lang python` | Shows `testing`, `architecture`, `data-science`, `package-management` |
 | Filter by category | `ai-skills list --category security` | Shows `security`, excludes `data-science` |
 | Filter by category | `ai-skills list --category architecture` | Shows `architecture`, excludes `security` |
 | Filter by concept | `ai-skills list --concept testing` | Shows `testing` skills |
@@ -47,6 +47,8 @@ npm test
 | Keyword match | `ai-skills search owasp` | Returns `security` |
 | Keyword match | `ai-skills search refactor` | Returns `refactoring` |
 | Keyword match | `ai-skills search data` | Returns `data-science` |
+| Keyword match | `ai-skills search uv` | Returns `package-management` |
+| Keyword match | `ai-skills search fastapi` | Returns `code-review` |
 | No results | `ai-skills search nonexistent_skill_xyz` | Exits cleanly without error |
 
 ### `info`
@@ -58,6 +60,8 @@ npm test
 | Java testing | `ai-skills info testing --lang java` | Shows `java` |
 | Security | `ai-skills info security` | Shows `security` details |
 | Architecture | `ai-skills info architecture` | Shows `architecture` details |
+| Package management | `ai-skills info package-management --lang python` | Shows `uv`, `python` |
+| Code review | `ai-skills info code-review --lang python` | Shows `fastapi`, `python` |
 | Unknown concept | `ai-skills info nonexistent_concept_xyz` | Exits with error message |
 
 ### `install` (standard — `.ai-skills/<agent>/<concept>/<lang>/`)
@@ -70,6 +74,8 @@ npm test
 | Architecture | `ai-skills install architecture --agent antigravity` | `.ai-skills/antigravity/architecture/general/SKILL.md` |
 | Data science | `ai-skills install data-science --agent antigravity --lang python` | `.ai-skills/antigravity/data-science/python/SKILL.md` |
 | Accessibility | `ai-skills install accessibility --agent antigravity --lang react-native` | `.ai-skills/antigravity/accessibility/react-native/SKILL.md` |
+| Package management | `ai-skills install package-management --agent antigravity --lang python` | `.ai-skills/antigravity/package-management/python/SKILL.md` |
+| Code review | `ai-skills install code-review --agent antigravity --lang python` | `.ai-skills/antigravity/code-review/python/SKILL.md` |
 
 ### `install --native` (agent-native locations)
 

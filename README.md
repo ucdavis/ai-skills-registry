@@ -144,11 +144,13 @@ Skill files use YAML frontmatter matching the manifest entry, followed by the ac
 | `testing/typescript` | engineering | jest, vitest, tdd |
 | `data-science/python` | data | pandas, numpy, sklearn |
 | `code-review/general` | engineering | review, owasp, readability |
+| `code-review/python` | engineering | python, fastapi, pydantic |
 | `architecture/python` | architecture | pep8, clean-architecture |
 | `testing/general` | engineering | unit-testing, boundaries |
 | `refactoring/typescript` | engineering | solid, dry, type-safety |
 | `git-workflow/general` | engineering | git, conventional-commits, pr |
 | `security/general` | security | owasp, injection, auth |
+| `package-management/python` | engineering | uv, pip, venv, pyproject, lockfile |
 
 ---
 

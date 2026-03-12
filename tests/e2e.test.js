@@ -113,6 +113,8 @@ describe('ai-skills CLI E2E', () => {
       expect(out).toContain('testing');
       expect(out).toContain('architecture');
       expect(out).toContain('data-science');
+      expect(out).toContain('package-management');
+      expect(out).toContain('code-review');
     });
 
     it('--category security filters to security skills', () => {
@@ -166,6 +168,16 @@ describe('ai-skills CLI E2E', () => {
       expect(out).toContain('data-science');
     });
 
+    it('"uv" finds package-management skill', () => {
+      const out = runCli('search uv');
+      expect(out).toContain('package-management');
+    });
+
+    it('"fastapi" finds code-review skill', () => {
+      const out = runCli('search fastapi');
+      expect(out).toContain('code-review');
+    });
+
     it('"nonexistent_skill_xyz" returns no results gracefully', () => {
       const out = runCli('search nonexistent_skill_xyz');
       expect(out).not.toContain('Error');
@@ -199,6 +211,18 @@ describe('ai-skills CLI E2E', () => {
     it('architecture shows architecture details', () => {
       const out = runCli('info architecture');
       expect(out).toContain('architecture');
+    });
+
+    it('package-management --lang python shows uv details', () => {
+      const out = runCli('info package-management --lang python');
+      expect(out).toContain('uv');
+      expect(out).toContain('python');
+    });
+
+    it('code-review --lang python shows fastapi details', () => {
+      const out = runCli('info code-review --lang python');
+      expect(out).toContain('fastapi');
+      expect(out).toContain('python');
     });
 
     it('unknown concept exits with error', () => {
@@ -238,6 +262,16 @@ describe('ai-skills CLI E2E', () => {
     it('accessibility --agent antigravity --lang react-native', () => {
       runCli('install accessibility --agent antigravity --lang react-native');
       expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'accessibility', 'react-native', 'SKILL.md'))).toBe(true);
+    });
+
+    it('package-management --agent antigravity --lang python', () => {
+      runCli('install package-management --agent antigravity --lang python');
+      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'package-management', 'python', 'SKILL.md'))).toBe(true);
+    });
+
+    it('code-review --agent antigravity --lang python', () => {
+      runCli('install code-review --agent antigravity --lang python');
+      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'antigravity', 'code-review', 'python', 'SKILL.md'))).toBe(true);
     });
   });
 

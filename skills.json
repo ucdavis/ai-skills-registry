@@ -56,12 +56,12 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "code-review/java",
+      "id": "code-review/python",
       "concept": "code-review",
-      "language": "java",
+      "language": "python",
       "category": "engineering",
-      "tags": ["owasp", "concurrency", "memory", "immutability", "security"],
-      "description": "Java code review: memory leaks, concurrency, OWASP top 10, and immutability best practices",
+      "tags": ["code-review", "python", "fastapi", "pydantic", "async"],
+      "description": "Performs structured code reviews on Python and FastAPI codebases covering correctness, async safety, security, Pydantic v2 patterns, testing, and style.",
       "version": "1.0.0",
       "author": "tpa",
       "files": ["SKILL.md"]
@@ -158,6 +158,19 @@
       "category": "engineering",
       "tags": ["authoring", "agent", "skills", "scaffolding", "specification"],
       "description": "Create well-formatted Agent Skills following the agentskills.io specification. Use when writing, authoring, scaffolding, or reviewing a new skill, SKILL.md file, or skill directory structure.",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "package-management/python",
+      "concept": "package-management",
+      "language": "python",
+      "category": "engineering",
+      "tags": ["uv", "pip", "venv", "pyproject", "dependencies", "lockfile"],
+      "description": "Manage Python packages, virtual environments, and dependencies using uv. Use when installing packages, creating virtual environments, initializing Python projects, resolving dependencies, or running Python scripts.",
       "version": "1.0.0",
       "author": "tpa",
       "files": [
