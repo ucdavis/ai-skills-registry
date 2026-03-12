@@ -6,15 +6,16 @@ const PORT = 8080;
 const REGISTRY_URL = `http://localhost:${PORT}/skills.json`;
 const REPO_URL = `http://localhost:${PORT}`;
 
-const TEST_DIR = path.join(__dirname, 'test_sandbox');
-const CLI_PATH = path.join(__dirname, 'dist', 'index.js');
+const PROJECT_ROOT = path.join(__dirname, '..');
+const TEST_DIR = path.join(PROJECT_ROOT, 'test_sandbox');
+const CLI_PATH = path.join(PROJECT_ROOT, 'dist', 'index.js');
 
 let serverProcess;
 
 function startServer() {
   console.log('Starting local HTTP server...');
   serverProcess = spawn('python3', ['-m', 'http.server', PORT.toString()], {
-    cwd: __dirname,
+    cwd: PROJECT_ROOT,
     stdio: 'ignore'
   });
   
@@ -58,7 +59,7 @@ function assertExists(filePath) {
 
 async function runTests() {
   console.log('Building CLI...');
-  execSync('npm run build', { cwd: __dirname, stdio: 'inherit' });
+  execSync('npm run build', { cwd: PROJECT_ROOT, stdio: 'inherit' });
 
   startServer();
 
