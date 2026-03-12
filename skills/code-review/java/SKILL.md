@@ -1,9 +1,15 @@
 ---
-id: code-review/java
-concept: code-review
-language: java
-category: engineering
-version: 1.0.0
+name: java
+description: Code review process and language-specific checklists. Use when reviewing PRs or auditing existing code.
+metadata:
+  domain: code-review
+  id: code-review/java
+  concept: code-review
+  language: java
+  category: engineering
+  version: 1.0.0
+  category: engineering
+  tags: [code-review, quality, security, best-practices]
 ---
 
 # Code Review — Java

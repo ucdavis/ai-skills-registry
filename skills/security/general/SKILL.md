@@ -1,9 +1,15 @@
 ---
-id: security/general
-concept: security
-language: general
-category: security
-version: 1.0.0
+name: general
+description: Security review checklist covering OWASP top 10, input validation, secrets management, and auth patterns.
+metadata:
+  domain: security
+  id: security/general
+  concept: security
+  language: general
+  category: security
+  version: 1.0.0
+  category: security
+  tags: [owasp, security, injection, xss, auth, secrets]
 ---
 
 # Security Checklist

@@ -1,9 +1,15 @@
 ---
-id: testing/general
-concept: testing
-language: general
-category: engineering
-version: 1.0.0
+name: general
+description: Testing strategy and patterns. Use when writing, reviewing, or generating tests for any language.
+metadata:
+  domain: testing
+  id: testing/general
+  concept: testing
+  language: general
+  category: engineering
+  version: 1.0.0
+  category: engineering
+  tags: [testing, tdd, unit-testing, mocking]
 ---
 
 # Testing — General

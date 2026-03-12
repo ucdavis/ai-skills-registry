@@ -9,7 +9,7 @@
       "description": "Language-agnostic testing principles: boundary assertions, null checks, and behavior-driven test naming",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["instructions.md"]
+      "files": ["SKILL.md"]
     },
     {
       "id": "testing/typescript",
@@ -20,7 +20,7 @@
       "description": "TypeScript testing with Vitest/Jest: file structure, mocking strategy, async patterns, and coverage targets",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["instructions.md"]
+      "files": ["SKILL.md"]
     },
     {
       "id": "testing/python",
@@ -31,7 +31,7 @@
       "description": "Python testing with pytest: fixtures, parametrize, mocking with unittest.mock, and coverage",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["instructions.md"]
+      "files": ["SKILL.md"]
     },
     {
       "id": "testing/java",
@@ -42,7 +42,7 @@
       "description": "Java testing with JUnit 5 and Mockito: test lifecycle, mocking, and integration test patterns",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["instructions.md"]
+      "files": ["SKILL.md"]
     },
     {
       "id": "code-review/general",
@@ -53,7 +53,7 @@
       "description": "General code review process: priority ordering, what to block on, how to give actionable feedback",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["instructions.md"]
+      "files": ["SKILL.md"]
     },
     {
       "id": "code-review/java",
@@ -64,7 +64,7 @@
       "description": "Java code review: memory leaks, concurrency, OWASP top 10, and immutability best practices",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["instructions.md"]
+      "files": ["SKILL.md"]
     },
     {
       "id": "refactoring/typescript",
@@ -75,7 +75,7 @@
       "description": "TypeScript refactoring: SOLID principles, DRY, type safety improvements, and eliminating code smells",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["instructions.md"]
+      "files": ["SKILL.md"]
     },
     {
       "id": "git-workflow/general",
@@ -86,7 +86,7 @@
       "description": "Git workflow: branch naming, conventional commits, PR conventions, and merge strategies",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["instructions.md"]
+      "files": ["SKILL.md"]
     },
     {
       "id": "security/general",
@@ -97,7 +97,7 @@
       "description": "Security checklist: OWASP top 10, secret scanning, input validation, and auth patterns",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["instructions.md"]
+      "files": ["SKILL.md"]
     },
     {
       "id": "architecture/general",
@@ -108,7 +108,7 @@
       "description": "Architecture decisions: layering, design patterns, microservices trade-offs, and domain-driven design",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["instructions.md"]
+      "files": ["SKILL.md"]
     },
     {
       "id": "architecture/python",
@@ -119,7 +119,7 @@
       "description": "Python architecture: PEP-8, type hints, clean layering, dependency injection, and testing strategy",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["instructions.md"]
+      "files": ["SKILL.md"]
     },
     {
       "id": "data-science/python",
@@ -130,7 +130,7 @@
       "description": "Python data science: notebook structure, data validation, reproducibility, and model documentation",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["instructions.md"]
+      "files": ["SKILL.md"]
     },
     {
       "id": "accessibility/react-native",
@@ -140,7 +140,7 @@
       "tags": ["a11y", "react-native", "expo", "ios", "android"],
       "description": "Implement, audit, and fix accessibility (a11y) in React Native and Expo mobile apps.",
       "version": "1.0.0",
-      "author": "anthropic",
+      "author": "tpa",
       "files": [
         "SKILL.md",
         "references/components.md",
@@ -149,6 +149,19 @@
         "references/testing.md",
         "scripts/audit.js",
         "scripts/contrast-check.js"
+      ]
+    },
+    {
+      "id": "skill-authoring/general",
+      "concept": "skill-authoring",
+      "language": "general",
+      "category": "engineering",
+      "tags": ["authoring", "agent", "skills", "scaffolding", "specification"],
+      "description": "Create well-formatted Agent Skills following the agentskills.io specification. Use when writing, authoring, scaffolding, or reviewing a new skill, SKILL.md file, or skill directory structure.",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": [
+        "SKILL.md"
       ]
     }
   ]

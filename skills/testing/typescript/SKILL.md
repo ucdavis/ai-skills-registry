@@ -1,9 +1,15 @@
 ---
-id: testing/typescript
-concept: testing
-language: typescript
-category: engineering
-version: 1.0.0
+name: typescript
+description: Testing strategy and patterns. Use when writing, reviewing, or generating tests for any language.
+metadata:
+  domain: testing
+  id: testing/typescript
+  concept: testing
+  language: typescript
+  category: engineering
+  version: 1.0.0
+  category: engineering
+  tags: [testing, tdd, unit-testing, mocking]
 ---
 
 # Testing — TypeScript

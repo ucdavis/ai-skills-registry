@@ -1,9 +1,15 @@
 ---
-id: architecture/python
-concept: architecture
-language: python
-category: architecture
-version: 1.0.0
+name: python
+description: System architecture guidance including layering, design patterns, microservices, and domain-driven design.
+metadata:
+  domain: architecture
+  id: architecture/python
+  concept: architecture
+  language: python
+  category: architecture
+  version: 1.0.0
+  category: architecture
+  tags: [architecture, design-patterns, microservices, clean-architecture, ddd]
 ---
 
 # Architecture — Python

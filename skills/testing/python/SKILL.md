@@ -1,9 +1,15 @@
 ---
-id: testing/python
-concept: testing
-language: python
-category: engineering
-version: 1.0.0
+name: python
+description: Testing strategy and patterns. Use when writing, reviewing, or generating tests for any language.
+metadata:
+  domain: testing
+  id: testing/python
+  concept: testing
+  language: python
+  category: engineering
+  version: 1.0.0
+  category: engineering
+  tags: [testing, tdd, unit-testing, mocking]
 ---
 
 # Testing — Python

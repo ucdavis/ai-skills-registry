@@ -1,9 +1,15 @@
 ---
-id: git-workflow/general
-concept: git-workflow
-language: general
-category: engineering
-version: 1.0.0
+name: general
+description: Git workflow conventions including branch naming, conventional commits, PR templates, and merge strategies.
+metadata:
+  domain: git-workflow
+  id: git-workflow/general
+  concept: git-workflow
+  language: general
+  category: engineering
+  version: 1.0.0
+  category: engineering
+  tags: [git, commits, branching, pr, conventional-commits]
 ---
 
 # Git Workflow

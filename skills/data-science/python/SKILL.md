@@ -1,9 +1,15 @@
 ---
-id: data-science/python
-concept: data-science
-language: python
-category: data
-version: 1.0.0
+name: python
+description: "Data science workflows: notebook structure, data validation, reproducibility, and model documentation."
+metadata:
+  domain: data-science
+  id: data-science/python
+  concept: data-science
+  language: python
+  category: data
+  version: 1.0.0
+  category: data
+  tags: [data-science, pandas, numpy, jupyter, sklearn, reproducibility]
 ---
 
 # Data Science — Python

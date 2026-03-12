@@ -1,9 +1,15 @@
 ---
-id: refactoring/typescript
-concept: refactoring
-language: typescript
-category: engineering
-version: 1.0.0
+name: typescript
+description: Refactoring guidance and code smell detection. Use when improving existing code without changing behavior.
+metadata:
+  domain: refactoring
+  id: refactoring/typescript
+  concept: refactoring
+  language: typescript
+  category: engineering
+  version: 1.0.0
+  category: engineering
+  tags: [refactoring, clean-code, solid, dry]
 ---
 
 # Refactoring — TypeScript

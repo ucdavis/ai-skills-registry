@@ -1,9 +1,15 @@
 ---
-id: code-review/general
-concept: code-review
-language: general
-category: engineering
-version: 1.0.0
+name: general
+description: Code review process and language-specific checklists. Use when reviewing PRs or auditing existing code.
+metadata:
+  domain: code-review
+  id: code-review/general
+  concept: code-review
+  language: general
+  category: engineering
+  version: 1.0.0
+  category: engineering
+  tags: [code-review, quality, security, best-practices]
 ---
 
 # Code Review — General
