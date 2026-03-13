@@ -1,5 +1,5 @@
 ---
-name: package-management
+name: python
 description: Manage Python packages, virtual environments, and dependencies using uv. Use when installing packages, creating virtual environments, initializing Python projects, resolving dependencies, or running Python scripts in a uv-managed workspace.
 compatibility: Requires uv to be installed in the environment
 metadata:

@@ -8,7 +8,6 @@ metadata:
   language: python
   category: data
   version: 1.0.0
-  category: data
   tags: [data-science, pandas, numpy, jupyter, sklearn, reproducibility]
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: python
-description: Testing strategy and patterns. Use when writing, reviewing, or generating tests for any language.
+description: Python testing strategy and patterns using pytest. Use when writing, reviewing, or generating tests for Python code, or when asked about pytest, fixtures, mocking, or test coverage in a Python project.
 metadata:
   domain: testing
   id: testing/python
@@ -8,7 +8,6 @@ metadata:
   language: python
   category: engineering
   version: 1.0.0
-  category: engineering
   tags: [testing, tdd, unit-testing, mocking]
 ---
 

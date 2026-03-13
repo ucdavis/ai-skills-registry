@@ -108,6 +108,8 @@ export interface ListOptions {
   category?: string;
   tag?: string;
   concept?: string;
+  categories?: boolean;
+  concepts?: boolean;
 }
 
 const CATEGORY_LABELS: Record<string, string> = {
@@ -123,6 +125,29 @@ export async function listSkills(options: ListOptions = {}) {
   const index = await fetchRegistryIndex();
 
   let skills = index.skills;
+
+  if (options.categories) {
+    const categories = Array.from(new Set(skills.map(s => s.category))).sort();
+    console.log(chalk.green('\nAvailable Categories:'));
+    console.log('='.repeat(40));
+    for (const c of categories) {
+      const label = CATEGORY_LABELS[c] ?? c;
+      console.log(`  ${chalk.blue.bold(label)} ${chalk.dim(`(${c})`)}`);
+    }
+    console.log();
+    return;
+  }
+
+  if (options.concepts) {
+    const concepts = Array.from(new Set(skills.map(s => s.concept))).sort();
+    console.log(chalk.green('\nAvailable Concepts:'));
+    console.log('='.repeat(40));
+    for (const c of concepts) {
+      console.log(`  ${chalk.cyan.bold(c)}`);
+    }
+    console.log();
+    return;
+  }
 
   if (options.lang) {
     skills = skills.filter(s => s.language.toLowerCase() === options.lang!.toLowerCase());

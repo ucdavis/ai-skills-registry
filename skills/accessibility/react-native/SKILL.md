@@ -1,5 +1,5 @@
 ---
-name: rn-accessibility
+name: react-native
 description: >
   Implement, audit, and fix accessibility (a11y) in React Native and Expo mobile apps.
   Use this skill whenever the user mentions accessibility, a11y, screen readers, VoiceOver,

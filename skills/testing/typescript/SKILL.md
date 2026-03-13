@@ -8,7 +8,6 @@ metadata:
   language: typescript
   category: engineering
   version: 1.0.0
-  category: engineering
   tags: [testing, tdd, unit-testing, mocking]
 ---
 

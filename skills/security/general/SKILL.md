@@ -8,7 +8,6 @@ metadata:
   language: general
   category: security
   version: 1.0.0
-  category: security
   tags: [owasp, security, injection, xss, auth, secrets]
 ---
 

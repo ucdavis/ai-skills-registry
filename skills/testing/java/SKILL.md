@@ -1,6 +1,6 @@
 ---
 name: java
-description: Testing strategy and patterns. Use when writing, reviewing, or generating tests for any language.
+description: Java testing strategy and patterns using JUnit 5 and Mockito. Use when writing, reviewing, or generating tests for Java code, or when asked about JUnit, Mockito, test lifecycle, or coverage in a Java project.
 metadata:
   domain: testing
   id: testing/java
@@ -8,7 +8,6 @@ metadata:
   language: java
   category: engineering
   version: 1.0.0
-  category: engineering
   tags: [testing, tdd, unit-testing, mocking]
 ---
 

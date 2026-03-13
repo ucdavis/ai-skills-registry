@@ -42,6 +42,10 @@ ai-skills list --lang typescript
 ai-skills list --category security
 ai-skills list --concept testing
 ai-skills list --tag owasp
+
+# List all available groupings
+ai-skills list --categories
+ai-skills list --concepts
 ```
 
 ### `search` — find skills by keyword

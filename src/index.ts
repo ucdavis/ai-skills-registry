@@ -21,6 +21,8 @@ program
   .option('-c, --category <category>', 'Filter by category (engineering, architecture, security, data, frontend, backend)')
   .option('--concept <concept>', 'Filter by concept (e.g. testing, code-review, architecture)')
   .option('--tag <tag>', 'Filter by tag (e.g. jest, owasp, pandas)')
+  .option('--categories', 'List all available categories')
+  .option('--concepts', 'List all available concepts')
   .action(async (options) => {
     await listSkills(options);
   });

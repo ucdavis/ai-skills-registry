@@ -1,9 +1,11 @@
 ---
-name: skill-authoring
+name: general
 description: Create well-formatted Agent Skills following the agentskills.io specification. Use when writing, authoring, scaffolding, or reviewing a new skill, SKILL.md file, or skill directory structure.
-compatibility: Designed for Claude Code (or similar agentic coding assistants)
 metadata:
+  id: skill-authoring/general
   spec: https://agentskills.io/specification
+  target: Antigravity, Claude Code (or similar agentic coding assistants)
+  version: 1.0.0
 ---
 
 # Skill Authoring

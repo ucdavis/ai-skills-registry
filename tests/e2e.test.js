@@ -154,6 +154,27 @@ describe('ai-skills CLI E2E', () => {
       const out = runCli('list --concept design');
       expect(out).toContain('design');
     });
+
+    it('--categories shows unique categories', () => {
+      const out = runCli('list --categories');
+      expect(out).toContain('Available Categories:');
+      expect(out).toContain('Engineering');
+      expect(out).toContain('Security');
+      expect(out).toContain('Architecture');
+      // Should not contain typical skill listings
+      expect(out).not.toContain('testing/typescript');
+    });
+
+    it('--concepts shows unique concepts', () => {
+      const out = runCli('list --concepts');
+      expect(out).toContain('Available Concepts:');
+      expect(out).toContain('testing');
+      expect(out).toContain('security');
+      expect(out).toContain('architecture');
+      expect(out).toContain('code-review');
+      // Should not contain typical skill listings
+      expect(out).not.toContain('typescript');
+    });
   });
 
   // ── search ────────────────────────────────────────────────────────────────

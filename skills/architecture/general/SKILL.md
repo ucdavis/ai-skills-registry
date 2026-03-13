@@ -8,7 +8,6 @@ metadata:
   language: general
   category: architecture
   version: 1.0.0
-  category: architecture
   tags: [architecture, design-patterns, microservices, clean-architecture, ddd]
 ---
 

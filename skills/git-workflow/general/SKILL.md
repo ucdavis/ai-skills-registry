@@ -8,7 +8,6 @@ metadata:
   language: general
   category: engineering
   version: 1.0.0
-  category: engineering
   tags: [git, commits, branching, pr, conventional-commits]
 ---
 

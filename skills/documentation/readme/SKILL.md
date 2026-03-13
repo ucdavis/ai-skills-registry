@@ -1,6 +1,6 @@
 ---
 name: readme
-description: Generates a detailed README file based on provided project data and parameters.
+description: Generate a detailed README.md for a project covering purpose, installation, usage, and configuration. Use when asked to write, create, or improve a README or project documentation landing page.
 metadata:
   domain: documentation
   id: documentation/readme
