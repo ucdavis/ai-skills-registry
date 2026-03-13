@@ -12,8 +12,8 @@
     "test": "vitest run tests/e2e.test.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Thomas Amsler",
+  "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "@types/node": "^25.4.0",

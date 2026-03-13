@@ -156,7 +156,15 @@ Skill files use YAML frontmatter matching the manifest entry, followed by the ac
 | `refactoring/typescript` | engineering | solid, dry, type-safety |
 | `git-workflow/general` | engineering | git, conventional-commits, pr |
 | `security/general` | security | owasp, injection, auth |
-| `package-management/python` | engineering | uv, pip, venv, pyproject, lockfile |
+| `package-management/python` | engineering | uv, pip, venv |
+| `accessibility/general` | auditing | accessibility, testing, ui |
+| `design/frontend` | frontend | design, styling, ux |
+| `ci-cd/github-actions` | devops | ci-cd, automation |
+| `project-management/jira` | project-management | jira, agile |
+| `git-workflow/pr-generator` | engineering | pr, automation |
+| `documentation/project` | documentation | architecture, overview |
+| `documentation/readme` | documentation | generative, docs |
+| `infrastructure/terraform` | devops | iac, aws, azure, gcp |
 
 ---
 

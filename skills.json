@@ -176,6 +176,94 @@
       "files": [
         "SKILL.md"
       ]
+    },
+    {
+      "id": "accessibility/general",
+      "concept": "accessibility",
+      "language": "general",
+      "category": "auditing",
+      "tags": ["accessibility", "testing", "wcag", "ui", "design"],
+      "description": "Reviews UI for accessibility issues against WCAG 2.1/2.2 AA. Triggers on \"is this accessible?\", \"check accessibility\", or contrast/a11y review requests.",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["SKILL.md", "references/wcag-checklist.md"]
+    },
+    {
+      "id": "design/frontend",
+      "concept": "design",
+      "language": "frontend",
+      "category": "frontend",
+      "tags": ["design", "styling", "ui", "ux", "aesthetics"],
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["SKILL.md"]
+    },
+    {
+      "id": "ci-cd/github-actions",
+      "concept": "ci-cd",
+      "language": "github-actions",
+      "category": "devops",
+      "tags": ["ci-cd", "github-actions", "devops", "workflow", "automation"],
+      "description": "Build comprehensive GitHub Actions workflows for CI/CD, testing, security, and deployment. Master workflows, jobs, steps, and conditional execution.",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["SKILL.md"]
+    },
+    {
+      "id": "project-management/jira",
+      "concept": "agile",
+      "language": "general",
+      "category": "project-management",
+      "tags": ["project-management", "jira", "agile", "user-stories"],
+      "description": "Craft comprehensive JIRA tickets (summary, context, requirements, deliverables, definition of done) from a title plus repo/user inputs. Trigger when the user asks for help drafting or refining a JIRA card, ticket, or story and expects structured markdown saved to disk.",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["SKILL.md", "references/context_checklist.md", "references/jira_card_template.md"]
+    },
+    {
+      "id": "git-workflow/pr-generator",
+      "concept": "git-workflow",
+      "language": "general",
+      "category": "engineering",
+      "tags": ["git", "pr", "pull-request", "automation"],
+      "description": "Generate GitHub pull request descriptions by analyzing git changes between two branches. Use when the user asks to create or draft a PR description based on branch diffs (for example, \"Generate a PR for the changes between featureBranch and mainBranch\") and expects a filled template with summary, motivation, and change impact flags.",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["SKILL.md", "scripts/collect_pr_changes.py"]
+    },
+    {
+      "id": "documentation/project",
+      "concept": "documentation",
+      "language": "general",
+      "category": "documentation",
+      "tags": ["documentation", "docs", "project", "architecture", "overview"],
+      "description": "Generate full project documentation packages (index, README/overview, development setup, database ERDs, architecture UML, REST/web UI specs, logging, emails, scheduled jobs, ops runbooks, Jira/Git guides, PRDs). Use when asked to inspect a codebase and produce markdown docs under docs/ plus supporting README.",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["SKILL.md", "references/research_checklist.md", "references/doc_templates.md"]
+    },
+    {
+      "id": "documentation/readme",
+      "concept": "documentation",
+      "language": "general",
+      "category": "documentation",
+      "tags": ["documentation", "readme", "generative"],
+      "description": "Generates a detailed README file based on provided project data and parameters.",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["SKILL.md"]
+    },
+    {
+      "id": "infrastructure/terraform",
+      "concept": "iac",
+      "language": "terraform",
+      "category": "devops",
+      "tags": ["infrastructure", "terraform", "iac", "aws", "azure", "gcp"],
+      "description": "Build reusable Terraform modules for AWS, Azure, and GCP infrastructure following infrastructure-as-code best practices. Use when creating infrastructure modules, standardizing cloud provisioning, or implementing reusable IaC components.",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["SKILL.md"]
     }
   ]
 }

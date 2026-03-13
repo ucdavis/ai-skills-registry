@@ -143,6 +143,17 @@ describe('ai-skills CLI E2E', () => {
       const out = runCli('list --tag owasp');
       expect(out).toContain('security');
     });
+
+    it('--category devops filters to devops skills', () => {
+      const out = runCli('list --category devops');
+      expect(out).toContain('ci-cd');
+      expect(out).toContain('infrastructure');
+    });
+
+    it('--concept design filters to design concept', () => {
+      const out = runCli('list --concept design');
+      expect(out).toContain('design');
+    });
   });
 
   // ── search ────────────────────────────────────────────────────────────────
@@ -176,6 +187,11 @@ describe('ai-skills CLI E2E', () => {
     it('"fastapi" finds code-review skill', () => {
       const out = runCli('search fastapi');
       expect(out).toContain('code-review');
+    });
+
+    it('"terraform" finds infrastructure/terraform skill', () => {
+      const out = runCli('search terraform');
+      expect(out).toContain('infrastructure/terraform');
     });
 
     it('"nonexistent_skill_xyz" returns no results gracefully', () => {
@@ -225,6 +241,18 @@ describe('ai-skills CLI E2E', () => {
       expect(out).toContain('python');
     });
 
+    it('design --lang frontend shows design details', () => {
+      const out = runCli('info design --lang frontend');
+      expect(out).toContain('design');
+      expect(out).toContain('frontend');
+    });
+
+    it('iac --lang terraform shows terraform details', () => {
+      const out = runCli('info iac --lang terraform');
+      expect(out).toContain('terraform');
+      expect(out).toContain('azure');
+    });
+
     it('unknown concept exits with error', () => {
       const { stdout, stderr } = runCliExpectFailure('info nonexistent_concept_xyz');
       expect(stdout + stderr).toMatch(/not found|error/i);
@@ -272,6 +300,11 @@ describe('ai-skills CLI E2E', () => {
     it('code-review --lang python', () => {
       runCli('install code-review --lang python');
       expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'code-review', 'python', 'SKILL.md'))).toBe(true);
+    });
+
+    it('design --lang frontend', () => {
+      runCli('install design --lang frontend');
+      expect(fs.existsSync(path.join(TEST_DIR, '.ai-skills', 'design', 'frontend', 'SKILL.md'))).toBe(true);
     });
   });
 
