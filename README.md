@@ -78,10 +78,10 @@ To install directly into an agent's specific native config location, provide the
 # Appends to .cursorrules
 ai-skills install testing --agent cursor
 
-# Creates .claude/commands/code-review.md
+# Creates .claude/commands/code-review-general.md
 ai-skills install code-review --agent claude-code
 
-# Appends to .agent/skills/git-workflow/
+# Installs to .agent/skills/git-workflow-general/
 ai-skills install git-workflow --agent antigravity
 ```
 
@@ -116,10 +116,10 @@ ai-skills install-all
 
 | Agent | Strategy | Location |
 |-------|----------|----------|
-| `claude-code` | Slash command | `.claude/commands/<concept>.md` |
+| `claude-code` | Slash command | `.claude/commands/<concept>-<language>.md` |
 | `cursor` | Append | `.cursorrules` |
 | `vsc` | Append | `.github/copilot-instructions.md` |
-| `antigravity` | Skill folder | `.agent/skills/<concept>/` |
+| `antigravity` | Skill folder | `.agent/skills/<concept>-<language>/` |
 
 ---
 

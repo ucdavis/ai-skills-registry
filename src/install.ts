@@ -35,7 +35,7 @@ function applyNativeInstall(
   if (nativeConfig.strategy === 'commands-dir') {
     const commandsDir = path.join(cwd, nativeConfig.commandsDir!);
     fs.mkdirSync(commandsDir, { recursive: true });
-    const targetFile = path.join(commandsDir, `${skill.concept}.md`);
+    const targetFile = path.join(commandsDir, `${skill.concept}-${skill.language}.md`);
     const combined = Object.values(fileContents).join('\n\n---\n\n');
     fs.writeFileSync(targetFile, combined);
     return targetFile;
@@ -49,7 +49,7 @@ function applyNativeInstall(
 
   } else if (nativeConfig.strategy === 'skill-folder') {
     const rootDir = nativeConfig.dir || '.agent/skills';
-    const targetDir = path.join(cwd, rootDir, skill.concept);
+    const targetDir = path.join(cwd, rootDir, `${skill.concept}-${skill.language}`);
     fs.mkdirSync(targetDir, { recursive: true });
     for (const [filename, content] of Object.entries(fileContents)) {
       const targetFilePath = path.join(targetDir, filename);

@@ -268,8 +268,8 @@ describe('ai-skills CLI E2E', () => {
       expect(out).toContain('frontend');
     });
 
-    it('iac --lang terraform shows terraform details', () => {
-      const out = runCli('info iac --lang terraform');
+    it('infrastructure --lang terraform shows terraform details', () => {
+      const out = runCli('info infrastructure --lang terraform');
       expect(out).toContain('terraform');
       expect(out).toContain('azure');
     });
@@ -345,14 +345,14 @@ describe('ai-skills CLI E2E', () => {
       expect(content).toContain('security');
     });
 
-    it('claude-code: creates .claude/commands/<concept>.md', () => {
+    it('claude-code: creates .claude/commands/<concept>-<language>.md', () => {
       runCli('install security --agent claude-code --lang general');
-      expect(fs.existsSync(path.join(TEST_DIR, '.claude', 'commands', 'security.md'))).toBe(true);
+      expect(fs.existsSync(path.join(TEST_DIR, '.claude', 'commands', 'security-general.md'))).toBe(true);
     });
 
-    it('claude-code: creates separate file per concept', () => {
+    it('claude-code: creates separate file per concept and language', () => {
       runCli('install code-review --agent claude-code');
-      expect(fs.existsSync(path.join(TEST_DIR, '.claude', 'commands', 'code-review.md'))).toBe(true);
+      expect(fs.existsSync(path.join(TEST_DIR, '.claude', 'commands', 'code-review-general.md'))).toBe(true);
     });
 
     it('vsc: appends to .github/copilot-instructions.md', () => {
@@ -362,9 +362,9 @@ describe('ai-skills CLI E2E', () => {
       expect(content).toContain('git-workflow');
     });
 
-    it('antigravity: installs to .agent/skills/<concept>/', () => {
+    it('antigravity: installs to .agent/skills/<concept>-<language>/', () => {
       runCli('install refactoring --agent antigravity --lang typescript');
-      expect(fs.existsSync(path.join(TEST_DIR, '.agent', 'skills', 'refactoring'))).toBe(true);
+      expect(fs.existsSync(path.join(TEST_DIR, '.agent', 'skills', 'refactoring-typescript'))).toBe(true);
     });
   });
 
@@ -393,8 +393,8 @@ describe('ai-skills CLI E2E', () => {
         ]
       }));
       runCli('install-all');
-      expect(fs.existsSync(path.join(TEST_DIR, '.agent', 'skills', 'testing', 'SKILL.md'))).toBe(true);
-      expect(fs.existsSync(path.join(TEST_DIR, '.agent', 'skills', 'refactoring', 'SKILL.md'))).toBe(true);
+      expect(fs.existsSync(path.join(TEST_DIR, '.agent', 'skills', 'testing-general', 'SKILL.md'))).toBe(true);
+      expect(fs.existsSync(path.join(TEST_DIR, '.agent', 'skills', 'refactoring-typescript', 'SKILL.md'))).toBe(true);
     });
 
     it('installs skills without agent to default folder', () => {
@@ -415,8 +415,8 @@ describe('ai-skills CLI E2E', () => {
         ]
       }));
       runCli('install-all');
-      expect(fs.existsSync(path.join(TEST_DIR, '.claude', 'commands', 'git-workflow.md'))).toBe(true);
-      expect(fs.existsSync(path.join(TEST_DIR, '.claude', 'commands', 'architecture.md'))).toBe(true);
+      expect(fs.existsSync(path.join(TEST_DIR, '.claude', 'commands', 'git-workflow-general.md'))).toBe(true);
+      expect(fs.existsSync(path.join(TEST_DIR, '.claude', 'commands', 'architecture-general.md'))).toBe(true);
     });
   });
 });
