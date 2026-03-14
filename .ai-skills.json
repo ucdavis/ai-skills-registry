@@ -1,0 +1,76 @@
+{
+  "skills": [
+    {
+      "id": "testing/general"
+    },
+    {
+      "id": "testing/typescript"
+    },
+    {
+      "id": "testing/python"
+    },
+    {
+      "id": "testing/java"
+    },
+    {
+      "id": "code-review/general"
+    },
+    {
+      "id": "code-review/python"
+    },
+    {
+      "id": "refactoring/typescript"
+    },
+    {
+      "id": "git-workflow/general"
+    },
+    {
+      "id": "security/general"
+    },
+    {
+      "id": "architecture/general"
+    },
+    {
+      "id": "architecture/python"
+    },
+    {
+      "id": "data-science/python"
+    },
+    {
+      "id": "accessibility/react-native"
+    },
+    {
+      "id": "skill-authoring/general"
+    },
+    {
+      "id": "package-management/python"
+    },
+    {
+      "id": "accessibility/general"
+    },
+    {
+      "id": "design/frontend"
+    },
+    {
+      "id": "ci-cd/github-actions"
+    },
+    {
+      "id": "project-management/jira"
+    },
+    {
+      "id": "git-workflow/pr-generator"
+    },
+    {
+      "id": "documentation/project"
+    },
+    {
+      "id": "documentation/readme"
+    },
+    {
+      "id": "infrastructure/terraform"
+    },
+    {
+      "id": "assistant/rocky-lti-assist"
+    }
+  ]
+}

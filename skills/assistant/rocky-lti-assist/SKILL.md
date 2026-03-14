@@ -2,6 +2,7 @@
 name: rocky-lti-assist
 description: Coding assistant for the Rocky-LTI project — a Canvas LTI 1.3 integration with an AI-powered educational agent. Use when working on FastAPI endpoints, MCP server components, SQLAlchemy models, Alembic migrations, Azure Functions workers, React/TypeScript frontend, or LTI/OAuth authentication flows in this codebase.
 metadata:
+  id: assistant/rocky-lti-assist
   project: rocky-lti
   version: "1.0"
 ---
