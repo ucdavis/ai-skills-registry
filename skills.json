@@ -286,6 +286,17 @@
       "version": "1.0.0",
       "author": "tpa",
       "files": ["SKILL.md"]
+    },
+    {
+      "id": "git-workflow/monorepo",
+      "concept": "git-workflow",
+      "language": "monorepo",
+      "category": "engineering",
+      "tags": ["git", "monorepo", "branching", "versioning", "semver", "commits", "pr", "merge-conflicts"],
+      "description": "Provides Git monorepo workflow standards covering branching strategy, semantic version release tagging, commit message formats, pull request guidelines, and merge conflict resolution. Use when the user asks about branching, versioning, commit conventions, PR reviews, or resolving merge conflicts in a monorepo.",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["SKILL.md"]
     }
   ]
 }

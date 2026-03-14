@@ -3,6 +3,10 @@
     {
       "id": "skill-authoring/general",
       "agent": "antigravity"
+    },
+    {
+      "id": "skill-authoring/general",
+      "agent": "claude-code"
     }
   ]
 }

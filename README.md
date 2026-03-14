@@ -20,6 +20,12 @@ A centralized registry and CLI for managing AI coding assistant skills. Keep pro
 
 ---
 
+## Contributing
+
+We welcome contributions from the community! Whether you want to add a new skill, fix a bug, or improve documentation, please check out our [Contributing Guide](CONTRIBUTING.md) for detailed instructions on how to get started.
+
+---
+
 ## Quickstart
 
 ```bash
@@ -75,10 +81,10 @@ ai-skills install security
 To install directly into an agent's specific native config location, provide the `--agent` argument:
 
 ```bash
-# Appends to .cursorrules
+# Installs to .cursor/skills/testing-typescript/
 ai-skills install testing --agent cursor
 
-# Creates .claude/commands/code-review-general.md
+# Installs to .claude/skills/code-review-general/
 ai-skills install code-review --agent claude-code
 
 # Installs to .agent/skills/git-workflow-general/
@@ -116,10 +122,10 @@ ai-skills install-all
 
 | Agent | Strategy | Location |
 |-------|----------|----------|
-| `claude-code` | Slash command | `.claude/commands/<concept>-<language>.md` |
-| `cursor` | Append | `.cursorrules` |
-| `vsc` | Append | `.github/copilot-instructions.md` |
 | `antigravity` | Skill folder | `.agent/skills/<concept>-<language>/` |
+| `claude-code` | Skill folder | `.claude/skills/<concept>-<language>/` |
+| `cursor` | Skill folder | `.cursor/skills/<concept>-<language>/` |
+| `vsc` | Skill folder | `.github/skills/<concept>-<language>/` |
 
 ---
 
@@ -177,13 +183,8 @@ Skill files use YAML frontmatter matching the manifest entry, followed by the ac
 | `documentation/readme` | documentation | documentation, readme, generative |
 | `infrastructure/terraform` | devops | infrastructure, terraform, iac, aws, azure, gcp |
 | `assistant/rocky-lti-assist` | engineering | assistant, coding, fastapi, react, mcp |
+| `git-workflow/monorepo` | engineering | git, monorepo, branching, versioning, semver, commits, pr, merge-conflicts |
 <!-- END_SKILLS_TABLE -->
-
----
-
-## Contributing
-
-We welcome contributions from the community! Whether you want to add a new skill, fix a bug, or improve documentation, please check out our [Contributing Guide](CONTRIBUTING.md) for detailed instructions on how to get started.
 
 ---
 
