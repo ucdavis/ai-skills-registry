@@ -67,6 +67,17 @@
       "files": ["SKILL.md"]
     },
     {
+      "id": "code-review/typescript",
+      "concept": "code-review",
+      "language": "typescript",
+      "category": "engineering",
+      "tags": ["code-review", "typescript", "async", "type-safety", "node"],
+      "description": "Performs structured code reviews on TypeScript codebases covering correctness, type safety, async patterns, security, testing, and style. Use when reviewing TypeScript code, pull requests, or when asked to do a code review on a TypeScript or Node.js project.",
+      "version": "1.0.0",
+      "author": "tpa",
+      "files": ["SKILL.md"]
+    },
+    {
       "id": "refactoring/typescript",
       "concept": "refactoring",
       "language": "typescript",
