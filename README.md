@@ -181,15 +181,9 @@ Skill files use YAML frontmatter matching the manifest entry, followed by the ac
 
 ---
 
-## Adding New Skills
+## Contributing
 
-1. Create the directory: `skills/<concept>/<language>/`
-2. Add a `SKILL.md` file with YAML frontmatter following the `agentskills.io` standard.
-3. Add any necessary supplemental files, such as `scripts/` or `references/`.
-4. Add an entry to `skills.json`
-5. Commit and push to `main`
-
-The CLI fetches live from GitHub — no build or release step needed.
+We welcome contributions from the community! Whether you want to add a new skill, fix a bug, or improve documentation, please check out our [Contributing Guide](CONTRIBUTING.md) for detailed instructions on how to get started.
 
 ---
 
