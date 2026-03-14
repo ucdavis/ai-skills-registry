@@ -149,26 +149,35 @@ Skill files use YAML frontmatter matching the manifest entry, followed by the ac
 
 ## Available Skills
 
+<!-- START_SKILLS_TABLE -->
 | ID | Category | Tags |
 |----|-------|------|
-| `testing/typescript` | engineering | jest, vitest, tdd |
-| `data-science/python` | data | pandas, numpy, sklearn |
-| `code-review/general` | engineering | review, owasp, readability |
-| `code-review/python` | engineering | python, fastapi, pydantic |
-| `architecture/python` | architecture | pep8, clean-architecture |
-| `testing/general` | engineering | unit-testing, boundaries |
-| `refactoring/typescript` | engineering | solid, dry, type-safety |
-| `git-workflow/general` | engineering | git, conventional-commits, pr |
-| `security/general` | security | owasp, injection, auth |
-| `package-management/python` | engineering | uv, pip, venv |
-| `accessibility/general` | auditing | accessibility, testing, ui |
-| `design/frontend` | frontend | design, styling, ux |
-| `ci-cd/github-actions` | devops | ci-cd, automation |
-| `project-management/jira` | project-management | jira, agile |
-| `git-workflow/pr-generator` | engineering | pr, automation |
-| `documentation/project` | documentation | architecture, overview |
-| `documentation/readme` | documentation | generative, docs |
-| `infrastructure/terraform` | devops | iac, aws, azure, gcp |
+| `testing/general` | engineering | unit-testing, boundaries, null-safety, tdd |
+| `testing/typescript` | engineering | vitest, jest, tdd, mocking, coverage |
+| `testing/python` | engineering | pytest, unittest, mocking, fixtures, tdd |
+| `testing/java` | engineering | junit, mockito, tdd, integration-testing |
+| `code-review/general` | engineering | review, best-practices, security, readability, performance |
+| `code-review/python` | engineering | code-review, python, fastapi, pydantic, async |
+| `code-review/typescript` | engineering | code-review, typescript, async, type-safety, node |
+| `refactoring/typescript` | engineering | typescript, clean-code, dry, solid, type-safety |
+| `git-workflow/general` | engineering | git, commits, branching, pr, conventional-commits |
+| `security/general` | security | owasp, injection, xss, secrets, auth, input-validation |
+| `architecture/general` | architecture | design-patterns, microservices, clean-architecture, ddd, solid |
+| `architecture/python` | architecture | pep8, design-patterns, separation-of-concerns, clean-architecture, mypy |
+| `data-science/python` | data | pandas, numpy, jupyter, sklearn, reproducibility, data-validation |
+| `accessibility/react-native` | engineering | a11y, react-native, expo, ios, android |
+| `skill-authoring/general` | engineering | authoring, agent, skills, scaffolding, specification |
+| `package-management/python` | engineering | uv, pip, venv, pyproject, dependencies, lockfile |
+| `accessibility/general` | auditing | accessibility, testing, wcag, ui, design |
+| `design/frontend` | frontend | design, styling, ui, ux, aesthetics |
+| `ci-cd/github-actions` | devops | ci-cd, github-actions, devops, workflow, automation |
+| `project-management/jira` | project-management | project-management, jira, agile, user-stories |
+| `git-workflow/pr-generator` | engineering | git, pr, pull-request, automation |
+| `documentation/project` | documentation | documentation, docs, project, architecture, overview |
+| `documentation/readme` | documentation | documentation, readme, generative |
+| `infrastructure/terraform` | devops | infrastructure, terraform, iac, aws, azure, gcp |
+| `assistant/rocky-lti-assist` | engineering | assistant, coding, fastapi, react, mcp |
+<!-- END_SKILLS_TABLE -->
 
 ---
 
