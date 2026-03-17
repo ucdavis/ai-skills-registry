@@ -38,7 +38,6 @@ export async function showSkillInfo(concept: string, lang: string) {
     `  ${chalk.bold("Tags:")}        ${skill.tags.map((t) => chalk.gray(t)).join(", ")}`,
   );
   console.log(`  ${chalk.bold("Version:")}     ${skill.version}`);
-  console.log(`  ${chalk.bold("Author:")}      ${skill.author}`);
   console.log(`  ${chalk.bold("Files:")}       ${skill.files.join(", ")}`);
 
   const agents = Object.entries(agentsConfig.agents);

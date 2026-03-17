@@ -8,7 +8,6 @@
       "tags": ["unit-testing", "boundaries", "null-safety", "tdd"],
       "description": "Language-agnostic testing principles: boundary assertions, null checks, and behavior-driven test naming",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -19,7 +18,6 @@
       "tags": ["vitest", "jest", "tdd", "mocking", "coverage"],
       "description": "TypeScript testing with Vitest/Jest: file structure, mocking strategy, async patterns, and coverage targets",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -30,7 +28,6 @@
       "tags": ["pytest", "unittest", "mocking", "fixtures", "tdd"],
       "description": "Python testing with pytest: fixtures, parametrize, mocking with unittest.mock, and coverage",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -41,7 +38,6 @@
       "tags": ["junit", "mockito", "tdd", "integration-testing"],
       "description": "Java testing with JUnit 5 and Mockito: test lifecycle, mocking, and integration test patterns",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -58,7 +54,6 @@
       ],
       "description": "General code review process: priority ordering, what to block on, how to give actionable feedback",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -69,7 +64,6 @@
       "tags": ["code-review", "python", "fastapi", "pydantic", "async"],
       "description": "Performs structured code reviews on Python and FastAPI codebases covering correctness, async safety, security, Pydantic v2 patterns, testing, and style.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -80,7 +74,6 @@
       "tags": ["code-review", "typescript", "async", "type-safety", "node"],
       "description": "Performs structured code reviews on TypeScript codebases covering correctness, type safety, async patterns, security, testing, and style. Use when reviewing TypeScript code, pull requests, or when asked to do a code review on a TypeScript or Node.js project.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -91,7 +84,6 @@
       "tags": ["typescript", "clean-code", "dry", "solid", "type-safety"],
       "description": "TypeScript refactoring: SOLID principles, DRY, type safety improvements, and eliminating code smells",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -102,7 +94,6 @@
       "tags": ["git", "commits", "branching", "pr", "conventional-commits"],
       "description": "Git workflow: branch naming, conventional commits, PR conventions, and merge strategies",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -120,7 +111,6 @@
       ],
       "description": "Security checklist: OWASP top 10, secret scanning, input validation, and auth patterns",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -137,7 +127,6 @@
       ],
       "description": "Architecture decisions: layering, design patterns, microservices trade-offs, and domain-driven design",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -154,7 +143,6 @@
       ],
       "description": "Python architecture: PEP-8, type hints, clean layering, dependency injection, and testing strategy",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -172,7 +160,6 @@
       ],
       "description": "Python data science: notebook structure, data validation, reproducibility, and model documentation",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -183,7 +170,6 @@
       "tags": ["a11y", "react-native", "expo", "ios", "android"],
       "description": "Implement, audit, and fix accessibility (a11y) in React Native and Expo mobile apps.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": [
         "SKILL.md",
         "references/components.md",
@@ -202,7 +188,6 @@
       "tags": ["authoring", "agent", "skills", "scaffolding", "specification"],
       "description": "Create well-formatted Agent Skills following the agentskills.io specification. Use when writing, authoring, scaffolding, or reviewing a new skill, SKILL.md file, or skill directory structure.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -213,7 +198,6 @@
       "tags": ["uv", "pip", "venv", "pyproject", "dependencies", "lockfile"],
       "description": "Manage Python packages, virtual environments, and dependencies using uv. Use when installing packages, creating virtual environments, initializing Python projects, resolving dependencies, or running Python scripts.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -224,7 +208,6 @@
       "tags": ["accessibility", "testing", "wcag", "ui", "design"],
       "description": "Reviews UI for accessibility issues against WCAG 2.1/2.2 AA. Triggers on \"is this accessible?\", \"check accessibility\", or contrast/a11y review requests.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md", "resources/wcag-checklist.md"]
     },
     {
@@ -235,7 +218,6 @@
       "tags": ["design", "styling", "ui", "ux", "aesthetics"],
       "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -246,7 +228,6 @@
       "tags": ["ci-cd", "github-actions", "devops", "workflow", "automation"],
       "description": "Build comprehensive GitHub Actions workflows for CI/CD, testing, security, and deployment. Master workflows, jobs, steps, and conditional execution.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -257,7 +238,6 @@
       "tags": ["project-management", "jira", "agile", "user-stories"],
       "description": "Craft comprehensive JIRA tickets (summary, context, requirements, deliverables, definition of done) from a title plus repo/user inputs. Trigger when the user asks for help drafting or refining a JIRA card, ticket, or story and expects structured markdown saved to disk.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": [
         "SKILL.md",
         "references/context_checklist.md",
@@ -272,7 +252,6 @@
       "tags": ["git", "pr", "pull-request", "automation"],
       "description": "Generate GitHub pull request descriptions by analyzing git changes between two branches. Use when the user asks to create or draft a PR description based on branch diffs (for example, \"Generate a PR for the changes between featureBranch and mainBranch\") and expects a filled template with summary, motivation, and change impact flags.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md", "scripts/collect_pr_changes.py"]
     },
     {
@@ -283,7 +262,6 @@
       "tags": ["documentation", "docs", "project", "architecture", "overview"],
       "description": "Generate full project documentation packages (index, README/overview, development setup, database ERDs, architecture UML, REST/web UI specs, logging, emails, scheduled jobs, ops runbooks, Jira/Git guides, PRDs). Use when asked to inspect a codebase and produce markdown docs under docs/ plus supporting README.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": [
         "SKILL.md",
         "references/research_checklist.md",
@@ -298,7 +276,6 @@
       "tags": ["documentation", "readme", "generative"],
       "description": "Generates a detailed README file based on provided project data and parameters.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -309,7 +286,6 @@
       "tags": ["infrastructure", "terraform", "iac", "aws", "azure", "gcp"],
       "description": "Build reusable Terraform modules for AWS, Azure, and GCP infrastructure following infrastructure-as-code best practices. Use when creating infrastructure modules, standardizing cloud provisioning, or implementing reusable IaC components.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -320,7 +296,6 @@
       "tags": ["assistant", "coding", "fastapi", "react", "mcp"],
       "description": "Coding assistant for the Rocky-LTI project — a Canvas LTI 1.3 integration with an AI-powered educational agent. Use when working on FastAPI endpoints, MCP server components, SQLAlchemy models, Alembic migrations, Azure Functions workers, React/TypeScript frontend, or LTI/OAuth authentication flows in this codebase.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
@@ -340,7 +315,6 @@
       ],
       "description": "Provides Git monorepo workflow standards covering branching strategy, semantic version release tagging, commit message formats, pull request guidelines, and merge conflict resolution. Use when the user asks about branching, versioning, commit conventions, PR reviews, or resolving merge conflicts in a monorepo.",
       "version": "1.0.0",
-      "author": "tpa",
       "files": ["SKILL.md"]
     }
   ]

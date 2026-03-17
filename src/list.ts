@@ -47,7 +47,6 @@ export interface SkillManifest {
   tags: string[];
   description: string;
   version: string;
-  author: string;
   files: string[];
 }
 

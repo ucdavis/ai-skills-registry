@@ -53,7 +53,6 @@ Add an object to the `skills` array like this:
   "tags": ["tag1", "tag2"],
   "description": "<Same description you put in the SKILL.md frontmatter>",
   "version": "1.0.0",
-  "author": "<your-github-username>",
   "files": [
     "SKILL.md",
     "optional/extra/file.md"

@@ -11,7 +11,7 @@ A centralized registry and CLI for managing AI coding assistant skills. Keep pro
 ## Features
 
 - **Multi-agent** — skills for Antigravity, Claude Code, Cursor, and VSCode Copilot
-- **Rich metadata** — each skill has a description, theme, tags, version, and author
+- **Rich metadata** — each skill has a description, theme, tags, and version
 - **Themes** — cross-cutting concerns: `quality`, `architecture`, `security`, `dx`
 - **Tags** — find skills by framework or service (e.g. `jest`, `owasp`, `pandas`)
 - **Native install** — install directly to each agent's config location (`.claude/commands/`, `.cursorrules`, etc.)
@@ -144,7 +144,6 @@ Each skill in `skills.json`:
   "tags": ["vitest", "jest", "tdd", "mocking", "coverage"],
   "description": "TypeScript testing with Vitest/Jest: file structure, mocking strategy, async patterns, and coverage targets",
   "version": "1.0.0",
-  "author": "tpa",
   "files": ["SKILL.md"]
 }
 ```

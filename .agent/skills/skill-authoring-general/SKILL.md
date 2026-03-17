@@ -38,7 +38,7 @@ The directory name **must exactly match** the `name` field in `SKILL.md`.
 |------------------|-------|
 | `license`        | License name or path to bundled license file. |
 | `compatibility`  | 1–500 chars. Only include if the skill has specific environment requirements (tools, network, OS, product). |
-| `metadata`       | Arbitrary key-value map for extra properties (author, version, etc.). |
+| `metadata`       | Arbitrary key-value map for extra properties (version, team, links, etc.). |
 | `allowed-tools`  | Space-delimited pre-approved tools, e.g. `Bash(git:*) Read`. Experimental. |
 
 ### Minimal Template
@@ -63,7 +63,6 @@ description: Extracts and transforms X. Use when working with X files or when th
 license: MIT
 compatibility: Requires python3 and internet access
 metadata:
-  author: my-org
   version: "1.0"
 allowed-tools: Bash(python3:*) Read Write
 ---
