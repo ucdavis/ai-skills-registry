@@ -1,7 +1,5 @@
 # AI Skills Registry
 
-> **Disclaimer:** This project is experimental and a proof-of-concept. The CLI, registry format, and APIs are subject to breaking changes. Some skill definitions are placeholders and not fully fleshed out — they serve as examples of the intended structure rather than production-ready prompts.
-
 A centralized registry and CLI for managing AI coding assistant skills. Keep prompts, context definitions, and strategy documents organized across agents, languages, themes, and services — installable in one command.
 
 **Supported agents:** Google Antigravity · Claude Code · Cursor · Visual Studio Code (Copilot)
