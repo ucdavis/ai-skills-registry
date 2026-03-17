@@ -43,7 +43,7 @@ npm test
 
 | Test | Command | What it checks |
 |------|---------|----------------|
-| Keyword match | `ai-skills search boundary` | Returns `testing/general` |
+| Keyword match | `ai-skills search boundary` | Returns `testing-general` |
 | Keyword match | `ai-skills search owasp` | Returns `security` |
 | Keyword match | `ai-skills search refactor` | Returns `refactoring` |
 | Keyword match | `ai-skills search data` | Returns `data-science` |
@@ -64,29 +64,27 @@ npm test
 | Code review | `ai-skills info code-review --lang python` | Shows `fastapi`, `python` |
 | Unknown concept | `ai-skills info nonexistent_concept_xyz` | Exits with error message |
 
-### `install` (standard — `.ai-skills/<concept>/<lang>/`)
+### `install` (standard — `.ai-skills/<concept>-<lang>/`)
 
 | Test | Command | Expected file |
 |------|---------|---------------|
-| Python testing | `ai-skills install testing --lang python` | `.ai-skills/testing/python/SKILL.md` |
-| TypeScript testing | `ai-skills install testing --lang typescript` | `.ai-skills/testing/typescript/SKILL.md` |
-| Security | `ai-skills install security` | `.ai-skills/security/general/SKILL.md` |
-| Architecture | `ai-skills install architecture` | `.ai-skills/architecture/general/SKILL.md` |
-| Data science | `ai-skills install data-science --lang python` | `.ai-skills/data-science/python/SKILL.md` |
-| Accessibility | `ai-skills install accessibility --lang react-native` | `.ai-skills/accessibility/react-native/SKILL.md` |
-| Package management | `ai-skills install package-management --lang python` | `.ai-skills/package-management/python/SKILL.md` |
-| Code review | `ai-skills install code-review --lang python` | `.ai-skills/code-review/python/SKILL.md` |
+| Python testing | `ai-skills install testing --lang python` | `.ai-skills/testing-python/SKILL.md` |
+| TypeScript testing | `ai-skills install testing --lang typescript` | `.ai-skills/testing-typescript/SKILL.md` |
+| Security | `ai-skills install security` | `.ai-skills/security-general/SKILL.md` |
+| Architecture | `ai-skills install architecture` | `.ai-skills/architecture-general/SKILL.md` |
+| Data science | `ai-skills install data-science --lang python` | `.ai-skills/data-science-python/SKILL.md` |
+| Accessibility | `ai-skills install accessibility --lang react-native` | `.ai-skills/accessibility-react-native/SKILL.md` |
+| Package management | `ai-skills install package-management --lang python` | `.ai-skills/package-management-python/SKILL.md` |
+| Code review | `ai-skills install code-review --lang python` | `.ai-skills/code-review-python/SKILL.md` |
 
 ### `install with agent` (agent-native locations)
 
 | Test | Command | Expected file |
 |------|---------|---------------|
-| cursor | `ai-skills install code-review --agent cursor` | `.cursorrules` (appended) |
-| cursor (multiple) | `ai-skills install security --agent cursor` | `.cursorrules` (appended again) |
-| claude-code | `ai-skills install security --agent claude-code` | `.claude/commands/security.md` |
-| claude-code (multiple) | `ai-skills install code-review --agent claude-code` | `.claude/commands/code-review.md` |
-| vsc | `ai-skills install git-workflow --agent vsc` | `.github/copilot-instructions.md` |
-| antigravity | `ai-skills install refactoring --agent antigravity --lang typescript` | `.agent/skills/refactoring/` |
+| cursor | `ai-skills install code-review --agent cursor` | `.cursor/skills/code-review-general/SKILL.md` |
+| claude-code | `ai-skills install security --agent claude-code` | `.claude/skills/security-general/SKILL.md` |
+| vsc | `ai-skills install git-workflow --agent vsc` | `.github/skills/git-workflow-general/SKILL.md` |
+| antigravity | `ai-skills install refactoring --agent antigravity --lang typescript` | `.agent/skills/refactoring-typescript/SKILL.md` |
 
 ### `init`
 
@@ -99,9 +97,9 @@ npm test
 
 | Test | Command | What it checks |
 |------|---------|----------------|
-| Standard install | `ai-skills install-all` | Installs `testing/general` and `refactoring/typescript` for antigravity |
-| Without agent | `ai-skills install-all` | Lockfile with no agent installs skills to `.ai-skills/default/` |
-| Native install | `ai-skills install-all` | Installs `git-workflow` and `architecture` to `.claude/commands/` |
+| Native install | `ai-skills install-all` | Installs `testing-general` and `refactoring-typescript` to `.agent/skills/` |
+| Without agent | `ai-skills install-all` | Lockfile with no agent installs skills to `.ai-skills/<concept>-<language>/` |
+| Claude install | `ai-skills install-all` | Installs `git-workflow` and `architecture` to `.claude/skills/` |
 
 ## Environment variables
 

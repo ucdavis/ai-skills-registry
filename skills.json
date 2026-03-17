@@ -1,7 +1,7 @@
 {
   "skills": [
     {
-      "id": "testing/general",
+      "id": "testing-general",
       "concept": "testing",
       "language": "general",
       "category": "engineering",
@@ -12,7 +12,7 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "testing/typescript",
+      "id": "testing-typescript",
       "concept": "testing",
       "language": "typescript",
       "category": "engineering",
@@ -23,7 +23,7 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "testing/python",
+      "id": "testing-python",
       "concept": "testing",
       "language": "python",
       "category": "engineering",
@@ -34,7 +34,7 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "testing/java",
+      "id": "testing-java",
       "concept": "testing",
       "language": "java",
       "category": "engineering",
@@ -45,18 +45,24 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "code-review/general",
+      "id": "code-review-general",
       "concept": "code-review",
       "language": "general",
       "category": "engineering",
-      "tags": ["review", "best-practices", "security", "readability", "performance"],
+      "tags": [
+        "review",
+        "best-practices",
+        "security",
+        "readability",
+        "performance"
+      ],
       "description": "General code review process: priority ordering, what to block on, how to give actionable feedback",
       "version": "1.0.0",
       "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
-      "id": "code-review/python",
+      "id": "code-review-python",
       "concept": "code-review",
       "language": "python",
       "category": "engineering",
@@ -67,7 +73,7 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "code-review/typescript",
+      "id": "code-review-typescript",
       "concept": "code-review",
       "language": "typescript",
       "category": "engineering",
@@ -78,7 +84,7 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "refactoring/typescript",
+      "id": "refactoring-typescript",
       "concept": "refactoring",
       "language": "typescript",
       "category": "engineering",
@@ -89,7 +95,7 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "git-workflow/general",
+      "id": "git-workflow-general",
       "concept": "git-workflow",
       "language": "general",
       "category": "engineering",
@@ -100,51 +106,77 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "security/general",
+      "id": "security-general",
       "concept": "security",
       "language": "general",
       "category": "security",
-      "tags": ["owasp", "injection", "xss", "secrets", "auth", "input-validation"],
+      "tags": [
+        "owasp",
+        "injection",
+        "xss",
+        "secrets",
+        "auth",
+        "input-validation"
+      ],
       "description": "Security checklist: OWASP top 10, secret scanning, input validation, and auth patterns",
       "version": "1.0.0",
       "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
-      "id": "architecture/general",
+      "id": "architecture-general",
       "concept": "architecture",
       "language": "general",
       "category": "architecture",
-      "tags": ["design-patterns", "microservices", "clean-architecture", "ddd", "solid"],
+      "tags": [
+        "design-patterns",
+        "microservices",
+        "clean-architecture",
+        "ddd",
+        "solid"
+      ],
       "description": "Architecture decisions: layering, design patterns, microservices trade-offs, and domain-driven design",
       "version": "1.0.0",
       "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
-      "id": "architecture/python",
+      "id": "architecture-python",
       "concept": "architecture",
       "language": "python",
       "category": "architecture",
-      "tags": ["pep8", "design-patterns", "separation-of-concerns", "clean-architecture", "mypy"],
+      "tags": [
+        "pep8",
+        "design-patterns",
+        "separation-of-concerns",
+        "clean-architecture",
+        "mypy"
+      ],
       "description": "Python architecture: PEP-8, type hints, clean layering, dependency injection, and testing strategy",
       "version": "1.0.0",
       "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
-      "id": "data-science/python",
+      "id": "data-science-python",
       "concept": "data-science",
       "language": "python",
       "category": "data",
-      "tags": ["pandas", "numpy", "jupyter", "sklearn", "reproducibility", "data-validation"],
+      "tags": [
+        "pandas",
+        "numpy",
+        "jupyter",
+        "sklearn",
+        "reproducibility",
+        "data-validation"
+      ],
       "description": "Python data science: notebook structure, data validation, reproducibility, and model documentation",
       "version": "1.0.0",
       "author": "tpa",
       "files": ["SKILL.md"]
     },
     {
-      "id": "accessibility/react-native",
+      "id": "accessibility-react-native",
       "concept": "accessibility",
       "language": "react-native",
       "category": "engineering",
@@ -163,7 +195,7 @@
       ]
     },
     {
-      "id": "skill-authoring/general",
+      "id": "skill-authoring-general",
       "concept": "skill-authoring",
       "language": "general",
       "category": "engineering",
@@ -171,12 +203,10 @@
       "description": "Create well-formatted Agent Skills following the agentskills.io specification. Use when writing, authoring, scaffolding, or reviewing a new skill, SKILL.md file, or skill directory structure.",
       "version": "1.0.0",
       "author": "tpa",
-      "files": [
-        "SKILL.md"
-      ]
+      "files": ["SKILL.md"]
     },
     {
-      "id": "package-management/python",
+      "id": "package-management-python",
       "concept": "package-management",
       "language": "python",
       "category": "engineering",
@@ -184,12 +214,10 @@
       "description": "Manage Python packages, virtual environments, and dependencies using uv. Use when installing packages, creating virtual environments, initializing Python projects, resolving dependencies, or running Python scripts.",
       "version": "1.0.0",
       "author": "tpa",
-      "files": [
-        "SKILL.md"
-      ]
+      "files": ["SKILL.md"]
     },
     {
-      "id": "accessibility/general",
+      "id": "accessibility-general",
       "concept": "accessibility",
       "language": "general",
       "category": "auditing",
@@ -200,7 +228,7 @@
       "files": ["SKILL.md", "resources/wcag-checklist.md"]
     },
     {
-      "id": "design/frontend",
+      "id": "design-frontend",
       "concept": "design",
       "language": "frontend",
       "category": "frontend",
@@ -211,7 +239,7 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "ci-cd/github-actions",
+      "id": "ci-cd-github-actions",
       "concept": "ci-cd",
       "language": "github-actions",
       "category": "devops",
@@ -222,7 +250,7 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "project-management/jira",
+      "id": "project-management-jira",
       "concept": "project-management",
       "language": "jira",
       "category": "project-management",
@@ -230,10 +258,14 @@
       "description": "Craft comprehensive JIRA tickets (summary, context, requirements, deliverables, definition of done) from a title plus repo/user inputs. Trigger when the user asks for help drafting or refining a JIRA card, ticket, or story and expects structured markdown saved to disk.",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["SKILL.md", "references/context_checklist.md", "references/jira_card_template.md"]
+      "files": [
+        "SKILL.md",
+        "references/context_checklist.md",
+        "references/jira_card_template.md"
+      ]
     },
     {
-      "id": "git-workflow/pr-generator",
+      "id": "git-workflow-pr-generator",
       "concept": "git-workflow",
       "language": "pr-generator",
       "category": "engineering",
@@ -244,7 +276,7 @@
       "files": ["SKILL.md", "scripts/collect_pr_changes.py"]
     },
     {
-      "id": "documentation/project",
+      "id": "documentation-project",
       "concept": "documentation",
       "language": "project",
       "category": "documentation",
@@ -252,10 +284,14 @@
       "description": "Generate full project documentation packages (index, README/overview, development setup, database ERDs, architecture UML, REST/web UI specs, logging, emails, scheduled jobs, ops runbooks, Jira/Git guides, PRDs). Use when asked to inspect a codebase and produce markdown docs under docs/ plus supporting README.",
       "version": "1.0.0",
       "author": "tpa",
-      "files": ["SKILL.md", "references/research_checklist.md", "references/doc_templates.md"]
+      "files": [
+        "SKILL.md",
+        "references/research_checklist.md",
+        "references/doc_templates.md"
+      ]
     },
     {
-      "id": "documentation/readme",
+      "id": "documentation-readme",
       "concept": "documentation",
       "language": "readme",
       "category": "documentation",
@@ -266,7 +302,7 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "infrastructure/terraform",
+      "id": "infrastructure-terraform",
       "concept": "infrastructure",
       "language": "terraform",
       "category": "devops",
@@ -277,7 +313,7 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "assistant/rocky-lti-assist",
+      "id": "assistant-rocky-lti-assist",
       "concept": "assistant",
       "language": "rocky-lti-assist",
       "category": "engineering",
@@ -288,11 +324,20 @@
       "files": ["SKILL.md"]
     },
     {
-      "id": "git-workflow/monorepo",
+      "id": "git-workflow-monorepo",
       "concept": "git-workflow",
       "language": "monorepo",
       "category": "engineering",
-      "tags": ["git", "monorepo", "branching", "versioning", "semver", "commits", "pr", "merge-conflicts"],
+      "tags": [
+        "git",
+        "monorepo",
+        "branching",
+        "versioning",
+        "semver",
+        "commits",
+        "pr",
+        "merge-conflicts"
+      ],
       "description": "Provides Git monorepo workflow standards covering branching strategy, semantic version release tagging, commit message formats, pull request guidelines, and merge conflict resolution. Use when the user asks about branching, versioning, commit conventions, PR reviews, or resolving merge conflicts in a monorepo.",
       "version": "1.0.0",
       "author": "tpa",

@@ -78,6 +78,8 @@ ai-skills install testing --lang typescript
 ai-skills install security
 ```
 
+Standard installs use `.ai-skills/<concept>-<language>/`.
+
 To install directly into an agent's specific native config location, provide the `--agent` argument:
 
 ```bash
@@ -103,9 +105,9 @@ ai-skills init
 ```json
 {
   "skills": [
-    { "id": "testing/typescript" },
-    { "id": "security/general" },
-    { "id": "git-workflow/general", "agent": "claude-code" }
+    { "id": "testing-typescript" },
+    { "id": "security-general" },
+    { "id": "git-workflow-general", "agent": "claude-code" }
   ]
 }
 ```
@@ -135,7 +137,7 @@ Each skill in `skills.json`:
 
 ```json
 {
-  "id": "testing/typescript",
+  "id": "testing-typescript",
   "concept": "testing",
   "language": "typescript",
   "category": "engineering",
@@ -158,32 +160,32 @@ Skill files use YAML frontmatter matching the manifest entry, followed by the ac
 <!-- START_SKILLS_TABLE -->
 | ID | Category | Tags |
 |----|-------|------|
-| `testing/general` | engineering | unit-testing, boundaries, null-safety, tdd |
-| `testing/typescript` | engineering | vitest, jest, tdd, mocking, coverage |
-| `testing/python` | engineering | pytest, unittest, mocking, fixtures, tdd |
-| `testing/java` | engineering | junit, mockito, tdd, integration-testing |
-| `code-review/general` | engineering | review, best-practices, security, readability, performance |
-| `code-review/python` | engineering | code-review, python, fastapi, pydantic, async |
-| `code-review/typescript` | engineering | code-review, typescript, async, type-safety, node |
-| `refactoring/typescript` | engineering | typescript, clean-code, dry, solid, type-safety |
-| `git-workflow/general` | engineering | git, commits, branching, pr, conventional-commits |
-| `security/general` | security | owasp, injection, xss, secrets, auth, input-validation |
-| `architecture/general` | architecture | design-patterns, microservices, clean-architecture, ddd, solid |
-| `architecture/python` | architecture | pep8, design-patterns, separation-of-concerns, clean-architecture, mypy |
-| `data-science/python` | data | pandas, numpy, jupyter, sklearn, reproducibility, data-validation |
-| `accessibility/react-native` | engineering | a11y, react-native, expo, ios, android |
-| `skill-authoring/general` | engineering | authoring, agent, skills, scaffolding, specification |
-| `package-management/python` | engineering | uv, pip, venv, pyproject, dependencies, lockfile |
-| `accessibility/general` | auditing | accessibility, testing, wcag, ui, design |
-| `design/frontend` | frontend | design, styling, ui, ux, aesthetics |
-| `ci-cd/github-actions` | devops | ci-cd, github-actions, devops, workflow, automation |
-| `project-management/jira` | project-management | project-management, jira, agile, user-stories |
-| `git-workflow/pr-generator` | engineering | git, pr, pull-request, automation |
-| `documentation/project` | documentation | documentation, docs, project, architecture, overview |
-| `documentation/readme` | documentation | documentation, readme, generative |
-| `infrastructure/terraform` | devops | infrastructure, terraform, iac, aws, azure, gcp |
-| `assistant/rocky-lti-assist` | engineering | assistant, coding, fastapi, react, mcp |
-| `git-workflow/monorepo` | engineering | git, monorepo, branching, versioning, semver, commits, pr, merge-conflicts |
+| `testing-general` | engineering | unit-testing, boundaries, null-safety, tdd |
+| `testing-typescript` | engineering | vitest, jest, tdd, mocking, coverage |
+| `testing-python` | engineering | pytest, unittest, mocking, fixtures, tdd |
+| `testing-java` | engineering | junit, mockito, tdd, integration-testing |
+| `code-review-general` | engineering | review, best-practices, security, readability, performance |
+| `code-review-python` | engineering | code-review, python, fastapi, pydantic, async |
+| `code-review-typescript` | engineering | code-review, typescript, async, type-safety, node |
+| `refactoring-typescript` | engineering | typescript, clean-code, dry, solid, type-safety |
+| `git-workflow-general` | engineering | git, commits, branching, pr, conventional-commits |
+| `security-general` | security | owasp, injection, xss, secrets, auth, input-validation |
+| `architecture-general` | architecture | design-patterns, microservices, clean-architecture, ddd, solid |
+| `architecture-python` | architecture | pep8, design-patterns, separation-of-concerns, clean-architecture, mypy |
+| `data-science-python` | data | pandas, numpy, jupyter, sklearn, reproducibility, data-validation |
+| `accessibility-react-native` | engineering | a11y, react-native, expo, ios, android |
+| `skill-authoring-general` | engineering | authoring, agent, skills, scaffolding, specification |
+| `package-management-python` | engineering | uv, pip, venv, pyproject, dependencies, lockfile |
+| `accessibility-general` | auditing | accessibility, testing, wcag, ui, design |
+| `design-frontend` | frontend | design, styling, ui, ux, aesthetics |
+| `ci-cd-github-actions` | devops | ci-cd, github-actions, devops, workflow, automation |
+| `project-management-jira` | project-management | project-management, jira, agile, user-stories |
+| `git-workflow-pr-generator` | engineering | git, pr, pull-request, automation |
+| `documentation-project` | documentation | documentation, docs, project, architecture, overview |
+| `documentation-readme` | documentation | documentation, readme, generative |
+| `infrastructure-terraform` | devops | infrastructure, terraform, iac, aws, azure, gcp |
+| `assistant-rocky-lti-assist` | engineering | assistant, coding, fastapi, react, mcp |
+| `git-workflow-monorepo` | engineering | git, monorepo, branching, versioning, semver, commits, pr, merge-conflicts |
 <!-- END_SKILLS_TABLE -->
 
 ---

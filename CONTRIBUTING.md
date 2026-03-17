@@ -16,12 +16,12 @@ npm install
 ```
 
 ### 2. Create the Skill Files
-Skills are organized by concept and language in the `skills/` directory. Create a new folder for your skill if it doesn't exist:
+Skills are organized as flattened `<concept>-<language>` directories in `skills/`. Create a new folder for your skill if it doesn't exist:
 
 ```bash
-mkdir -p skills/<concept>/<language>/
+mkdir -p skills/<concept>-<language>/
 ```
-For example: `skills/authentication/python/`
+For example: `skills/authentication-python/`
 
 Inside your new folder, create a `SKILL.md` file.
 
