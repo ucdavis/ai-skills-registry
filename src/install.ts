@@ -26,10 +26,12 @@ async function downloadSkillFiles(
   const contents: Record<string, string> = {};
   const skillDir = getSkillDirectoryName(skill);
   for (const file of skill.files) {
-    const localPath = path.join(__dirname, "..", "skills", skillDir, file);
-    if (fs.existsSync(localPath)) {
-      contents[file] = fs.readFileSync(localPath, "utf-8");
-      continue;
+    if (process.env.AI_SKILLS_LOCAL_DEV === "true") {
+      const localPath = path.join(__dirname, "..", "skills", skillDir, file);
+      if (fs.existsSync(localPath)) {
+        contents[file] = fs.readFileSync(localPath, "utf-8");
+        continue;
+      }
     }
     const baseUrl = process.env.AI_SKILLS_REPO_URL || REMOTE_BASE_URL;
     const fileUrl = `${baseUrl}/skills/${skillDir}/${file}`;

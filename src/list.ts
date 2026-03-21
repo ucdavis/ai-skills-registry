@@ -14,6 +14,8 @@ function localPackagePath(filename: string): string {
 }
 
 function readLocalJson<T>(filename: string): T | null {
+  if (process.env.AI_SKILLS_LOCAL_DEV !== "true") return null;
+
   const filePath = localPackagePath(filename);
   if (fs.existsSync(filePath)) {
     return JSON.parse(fs.readFileSync(filePath, "utf-8")) as T;
