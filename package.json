@@ -4,13 +4,22 @@
   "description": "",
   "main": "dist/index.js",
   "bin": {
-    "ai-skills": "dist/index.js"
+    "ai-skills": "./dist/index.js"
   },
   "scripts": {
     "prebuild": "node scripts/update-readme.js",
-    "build": "tsc",
+    "prepare": "npm run build",
+    "build": "rm -rf dist && tsc",
     "start": "node dist/index.js",
     "test": "vitest run tests/e2e.test.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ucdavis/ai-skills-registry.git"
   },
   "keywords": [],
   "author": "Thomas Amsler",

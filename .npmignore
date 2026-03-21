@@ -1,8 +1,0 @@
-# Override .gitignore so npm pack includes the dist/ folder that the prepare script builds
-.ai-skills/
-node_modules/
-skills/
-src/
-tests/
-tsconfig.json
-vitest.config.js
