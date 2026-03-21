@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.1] - 2026-03-21
 
+### Fixed
+- Fixed install.js issue
+
+## [1.1.0] - 2026-03-21
+
 ### Added
 - Created initial `CHANGELOG.md`.
 - Added versioning guidelines and changelog instructions to `CONTRIBUTING.md`.
