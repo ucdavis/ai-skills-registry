@@ -1,5 +1,5 @@
 import chalk from "chalk";
-import { fetchRegistryIndex, fetchAgentsConfig } from "./list";
+import { fetchRegistryIndex, fetchAgentsConfig } from "./list.js";
 
 export async function showSkillInfo(concept: string, lang: string) {
   const [index, agentsConfig] = await Promise.all([

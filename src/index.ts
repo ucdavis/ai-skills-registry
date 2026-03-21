@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
 
-import { listSkills } from './list';
-import { installSkill } from './install';
-import { searchSkills } from './search';
-import { showSkillInfo } from './info';
-import { installAll, initLockfile } from './install-all';
+import { listSkills } from './list.js';
+import { installSkill } from './install.js';
+import { searchSkills } from './search.js';
+import { showSkillInfo } from './info.js';
+import { installAll, initLockfile } from './install-all.js';
 
 const program = new Command();
 

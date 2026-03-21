@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { fetchRegistryIndex, SkillManifest } from './list';
+import { fetchRegistryIndex, SkillManifest } from './list.js';
 
 function matchesQuery(skill: SkillManifest, query: string): boolean {
   const q = query.toLowerCase();

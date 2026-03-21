@@ -8,7 +8,7 @@ import {
   fetchAgentsConfig,
   SkillManifest,
   NativeInstallConfig,
-} from "./list";
+} from "./list.js";
 
 const REMOTE_BASE_URL =
   "https://raw.githubusercontent.com/ucdavis/ai-skills-registry/main";

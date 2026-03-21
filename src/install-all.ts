@@ -1,8 +1,8 @@
 import chalk from "chalk";
 import fs from "fs";
 import path from "path";
-import { fetchRegistryIndex } from "./list";
-import { installSkill } from "./install";
+import { fetchRegistryIndex } from "./list.js";
+import { installSkill } from "./install.js";
 
 export interface SkillsLockfileEntry {
   id: string; // flattened skill name, e.g. "testing-typescript"
