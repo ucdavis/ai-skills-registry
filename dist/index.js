@@ -1,15 +1,21 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
 import { listSkills } from './list.js';
 import { installSkill } from './install.js';
 import { searchSkills } from './search.js';
 import { showSkillInfo } from './info.js';
 import { installAll, initLockfile } from './install-all.js';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const pkg = JSON.parse(readFileSync(join(__dirname, '../package.json'), 'utf-8'));
 const program = new Command();
 program
     .name('ai-skills')
     .description('CLI to manage and install AI skills across agents (Claude Code, VSCode, Cursor, Antigravity)')
-    .version('2.0.0');
+    .version(pkg.version);
 program
     .command('list')
     .description('List available skills, grouped by category and concept')
