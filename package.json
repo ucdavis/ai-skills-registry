@@ -12,9 +12,6 @@
     "start": "node dist/index.js",
     "test": "vitest run tests/e2e.test.js"
   },
-  "files": [
-    "dist"
-  ],
   "keywords": [],
   "author": "Thomas Amsler",
   "license": "MIT",
