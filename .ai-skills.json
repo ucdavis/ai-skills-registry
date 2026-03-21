@@ -7,6 +7,22 @@
     {
       "id": "skill-authoring-general",
       "agent": "claude-code"
+    },
+    {
+      "id": "skill-authoring-general",
+      "agent": "vsc"
+    },
+    {
+      "id": "git-workflow-release",
+      "agent": "antigravity"
+    },
+    {
+      "id": "git-workflow-release",
+      "agent": "claude-code"
+    },
+    {
+      "id": "git-workflow-release",
+      "agent": "vsc"
     }
   ]
 }

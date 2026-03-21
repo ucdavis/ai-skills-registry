@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
+## [1.2.0] - 2026-03-21
+
+### Added
+- Added `git-workflow-release` skill to the registry.
+- Command line interface now clearly logs when using the local vs remote github registry data.
+
+### Fixed
+- Fixed `__dirname` context resolution issues during local repository commands.
+- Fixed Vitest test configuration failing locally due to ESM vs CJS context.
+
 ## [1.1.1] - 2026-03-21
 
 ### Fixed

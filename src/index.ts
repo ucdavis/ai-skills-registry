@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
+import chalk from 'chalk';
 import { listSkills } from './list.js';
 import { installSkill } from './install.js';
 import { searchSkills } from './search.js';
@@ -15,6 +16,15 @@ const __dirname = dirname(__filename);
 const pkg = JSON.parse(readFileSync(join(__dirname, '../package.json'), 'utf-8'));
 
 const program = new Command();
+
+program.hook('preAction', (thisCommand, actionCommand) => {
+  if (actionCommand.name() === 'init') return;
+  if (process.env.AI_SKILLS_LOCAL_DEV === 'true') {
+    console.log(chalk.cyan('ℹ Using local ai-skills registry data\n'));
+  } else {
+    console.log(chalk.gray('ℹ Using remote github ai-skills registry data\n'));
+  }
+});
 
 program
   .name('ai-skills')

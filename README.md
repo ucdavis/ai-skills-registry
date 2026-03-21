@@ -215,6 +215,7 @@ Skill files use YAML frontmatter matching the manifest entry, followed by the ac
 | `infrastructure-terraform` | devops | infrastructure, terraform, iac, aws, azure, gcp |
 | `assistant-rocky-lti-assist` | engineering | assistant, coding, fastapi, react, mcp |
 | `git-workflow-monorepo` | engineering | git, monorepo, branching, versioning, semver, commits, pr, merge-conflicts |
+| `git-workflow-release` | engineering | git, release, versioning, changelog, semver |
 <!-- END_SKILLS_TABLE -->
 
 ---

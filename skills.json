@@ -316,6 +316,22 @@
       "description": "Provides Git monorepo workflow standards covering branching strategy, semantic version release tagging, commit message formats, pull request guidelines, and merge conflict resolution. Use when the user asks about branching, versioning, commit conventions, PR reviews, or resolving merge conflicts in a monorepo.",
       "version": "1.0.0",
       "files": ["SKILL.md"]
+    },
+    {
+      "id": "git-workflow-release",
+      "concept": "git-workflow",
+      "language": "release",
+      "category": "engineering",
+      "tags": [
+        "git",
+        "release",
+        "versioning",
+        "changelog",
+        "semver"
+      ],
+      "description": "Standardized process for committing changes and releasing a new version. Includes steps for bumping versions in package files, updating the CHANGELOG.md, ensuring the README.md is up to date, and creating git release tags.",
+      "version": "1.0.0",
+      "files": ["SKILL.md"]
     }
   ]
 }
