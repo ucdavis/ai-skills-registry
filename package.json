@@ -9,7 +9,7 @@
   "scripts": {
     "prepare": "npm run build",
     "prebuild": "node scripts/update-readme.js",
-    "build": "tsc",
+    "build": "npx --no tsc",
     "start": "node dist/index.js",
     "test": "vitest run tests/e2e.test.js"
   },
