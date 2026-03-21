@@ -7,9 +7,8 @@
     "ai-skills": "dist/index.js"
   },
   "scripts": {
-    "prepare": "npm run build",
     "prebuild": "node scripts/update-readme.js",
-    "build": "npx --no tsc",
+    "build": "tsc",
     "start": "node dist/index.js",
     "test": "vitest run tests/e2e.test.js"
   },
