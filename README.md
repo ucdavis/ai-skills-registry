@@ -31,13 +31,11 @@ We welcome contributions from the community! Whether you want to add a new skill
 Install the CLI globally directly from GitHub to use it across all your projects:
 
 ```bash
-npm install -g ucdavis/ai-skills-registry
+npm install -g https://github.com/ucdavis/ai-skills-registry/tarball/main
 ```
 
 > [!NOTE]
-> **Updating the CLI or fixing `ENOTDIR` errors:** Due to how `npm` handles global git dependencies, it creates a symlink to its internal cache instead of copying the files. Setting up the CLI a second time (or trying to update it) will result in an `ENOTDIR` error. Even if you previously used `npm link` for local development, you might encounter this.
-> 
-> **Always run this before reinstalling or updating:**
+> **Reinstalling or updating:** Always remove the old version first to avoid `ENOTDIR` errors:
 > ```bash
 > npm rm -g ai-skills-registry
 > ```

@@ -60,7 +60,13 @@ Add an object to the `skills` array like this:
 }
 ```
 
-### 5. Build and Test
+### 5. Versioning and Changelog
+When submitting your skill or modifying an existing one, please follow standard Semantic Versioning guidelines:
+- If you are modifying an existing skill, bump its `"version"` in `skills.json` (e.g., `"1.0.0"` -> `"1.0.1"` for a fix, `"1.1.0"` for a major addition).
+- Ensure the version matches any version listed in the `SKILL.md` frontmatter.
+- Please add an entry describing your changes to the `## [Unreleased]` section of the root `CHANGELOG.md` file.
+
+### 6. Build and Test
 Run the build script to ensure everything compiles correctly and the README's available skills table is updated automatically.
 
 ```bash
@@ -68,7 +74,7 @@ npm run build
 npm test
 ```
 
-### 6. Submit a Pull Request
+### 7. Submit a Pull Request
 Commit your changes, push to your fork, and open a Pull Request against the `main` branch of the `ucdavis/ai-skills-registry` repository.
 
 Once your PR is merged, the CLI will immediately be able to fetch your new skill live from the repository — no additional release step is required!
