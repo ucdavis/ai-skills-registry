@@ -9,10 +9,10 @@ A centralized registry and CLI for managing AI coding assistant skills. Keep pro
 ## Features
 
 - **Multi-agent** — skills for Antigravity, Claude Code, Cursor, and VSCode Copilot
-- **Rich metadata** — each skill has a description, theme, tags, and version
-- **Themes** — cross-cutting concerns: `quality`, `architecture`, `security`, `dx`
+- **Rich metadata** — each skill has a description, category, tags, and version
+- **Categories** — logical groups: `engineering`, `architecture`, `security`, `data`, etc.
 - **Tags** — find skills by framework or service (e.g. `jest`, `owasp`, `pandas`)
-- **Native install** — install directly to each agent's config location (`.claude/commands/`, `.cursorrules`, etc.)
+- **Native install** — install directly to each agent's config location (`.claude/skills/`, `.cursor/skills/`, etc.)
 - **Lockfile** — pin team skills in `.ai-skills.json` and restore with one command
 - **Dynamic fetching** — no local clone needed; fetches from GitHub at runtime
 
@@ -54,16 +54,6 @@ Then run it via `npx`:
 npx ai-skills list
 ```
 
-### Local Development
-
-If you are developing or contributing to the registry itself:
-
-```bash
-npm install
-npm run build
-npm link        # makes `ai-skills` available globally
-```
-
 ---
 
 ## Commands
@@ -101,7 +91,7 @@ ai-skills info testing --lang typescript
 ai-skills info code-review --lang general
 ```
 
-### `install` — iInstall a specific skill into your project's `ai-skills` directory:
+### `install` — install a specific skill into your project's `.ai-skills` directory:
 
 ```bash
 ai-skills install testing --lang typescript
@@ -178,7 +168,7 @@ Each skill in `skills.json`:
 }
 ```
 
-**Themes:** `quality` · `architecture` · `security` · `dx`
+**Categories:** `engineering` · `architecture` · `security` · `data` · `frontend` · `backend` · `devops` · `project-management` · `documentation` · `auditing`
 
 Skill files use YAML frontmatter matching the manifest entry, followed by the actual instructions in Markdown.
 
