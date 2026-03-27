@@ -47,6 +47,7 @@ rocky-lti/
 - **MCP**: FastMCP for Canvas resource/tool/prompt exposure
 - **Auth**: python-jose for JWT; LTI 1.3 OIDC launch flow
 - **Observability**: OpenTelemetry + Azure Monitor
+- **Linting/Formatting**: `ruff` (replaces flake8/black/isort)
 
 **Never use `pip` or `python -m venv`. Always use:**
 ```bash
@@ -146,3 +147,4 @@ This project uses Pydantic v2. Key differences:
 - Type-annotate all function signatures
 - Write tests for new endpoints and services
 - Follow existing module structure — don't create new top-level packages without discussion
+- **Use `ruff` for linting and formatting** (configured in `pyproject.toml`); run `uv run ruff check` and `uv run ruff format` before committing
