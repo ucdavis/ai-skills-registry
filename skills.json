@@ -187,7 +187,7 @@
       "category": "engineering",
       "tags": ["authoring", "agent", "skills", "scaffolding", "specification"],
       "description": "Create well-formatted Agent Skills following the agentskills.io specification. Use when writing, authoring, scaffolding, or reviewing a new skill, SKILL.md file, or skill directory structure.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "files": ["SKILL.md"]
     },
     {

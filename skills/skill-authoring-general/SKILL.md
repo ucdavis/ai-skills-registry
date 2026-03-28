@@ -118,6 +118,19 @@ Poor:
 description: Helps with PDFs.
 ```
 
+## Versioning
+
+Skill versions are tracked centrally in the repository's `skills.json` file. When you modify an existing skill or add a new one, you must update its version information using [Semantic Versioning (SemVer)](https://semver.org/):
+
+- **Patch (`x.x.Y`)**: Minor fixes, typo corrections, or small clarifications that do not change how the skill is fundamentally used.
+- **Minor (`x.Y.x`)**: Adding new steps, examples, or optional capabilities in a backward-compatible manner.
+- **Major (`Y.x.x`)**: Breaking changes to instructions, changing the allowed tools, or fundamentally altering the skill's purpose.
+
+When making a change:
+1. Locate the skill's entry in the `skills` array inside `skills.json` (or add a new entry for new skills).
+2. Bump the `version` field according to the SemVer rules above (start at `"1.0.0"` for new skills).
+3. If the skill uses the optional `metadata.version` field in its `SKILL.md` frontmatter, ensure that is updated as well to match.
+
 ## Validation
 
 Run the reference validator if available:
@@ -141,3 +154,4 @@ Common validation errors:
 - [ ] Large reference material is in `references/` not inline
 - [ ] Scripts in `scripts/` are self-contained with helpful error messages
 - [ ] `compatibility` field included only if environment requirements exist
+- [ ] Version in `skills.json` has been updated following Semantic Versioning
