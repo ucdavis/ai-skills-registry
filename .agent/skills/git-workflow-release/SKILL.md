@@ -28,9 +28,9 @@ Follow these instructions to safely and consistently release a new version of th
 
 ## 4. Commit the Release Changes
 - Stage the `package.json`, `CHANGELOG.md`, `README.md`, and any other updated metadata files.
-- Commit with a standard release message:
+- Commit with a standard release message subject, and explicitly list the summarized release changes (e.g. from the `CHANGELOG.md`) in the commit body using a multi-line format or multiple `-m` flags:
   ```bash
-  git commit -m "chore(release): bump version to v<NEW_VERSION>"
+  git commit -m "chore(release): bump version to v<NEW_VERSION>" -m "Changed: Updated dependencies and added SemVer guidelines."
   ```
 
 ## 5. Tag the Release
