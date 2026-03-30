@@ -299,6 +299,16 @@
       "files": ["SKILL.md"]
     },
     {
+      "id": "assistant-ucd-mobile",
+      "concept": "assistant",
+      "language": "ucd-mobile",
+      "category": "engineering",
+      "tags": ["assistant", "coding", "expo", "react-native", "typescript", "nativewind"],
+      "description": "Coding standards, component defaults, and best practices for the UCD Mobile app (Expo, React Native, NativeWind, Expo Router). Use when building or reviewing features in the UCD Mobile Expo project.",
+      "version": "1.0.0",
+      "files": ["SKILL.md"]
+    },
+    {
       "id": "git-workflow-monorepo",
       "concept": "git-workflow",
       "language": "monorepo",
