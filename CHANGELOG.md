@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
+## [1.4.1] - 2026-04-01
+
+### Fixed
+- Fixed YAML frontmatter parsing robustness by normalizing quoted descriptions in `skills.json` and related skill metadata formatting (PR #2, thanks to @rlorenzo).
+
 ## [1.4.0] - 2026-03-30
 
 ### Added
