@@ -1,6 +1,6 @@
 ---
 name: testing-python
-description: Python testing with pytest: fixtures, parametrize, mocking with unittest.mock, and coverage
+description: "Python testing with pytest: fixtures, parametrize, mocking with unittest.mock, and coverage"
 ---
 
 # Testing — Python

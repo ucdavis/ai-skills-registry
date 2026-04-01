@@ -1,6 +1,6 @@
 ---
 name: refactoring-typescript
-description: TypeScript refactoring: SOLID principles, DRY, type safety improvements, and eliminating code smells
+description: "TypeScript refactoring: SOLID principles, DRY, type safety improvements, and eliminating code smells"
 ---
 
 # Refactoring — TypeScript

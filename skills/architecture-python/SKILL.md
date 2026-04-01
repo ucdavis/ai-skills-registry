@@ -1,6 +1,6 @@
 ---
 name: architecture-python
-description: Python architecture: PEP-8, type hints, clean layering, dependency injection, and testing strategy
+description: "Python architecture: PEP-8, type hints, clean layering, dependency injection, and testing strategy"
 ---
 
 # Architecture — Python

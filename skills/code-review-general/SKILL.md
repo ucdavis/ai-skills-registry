@@ -1,6 +1,6 @@
 ---
 name: code-review-general
-description: General code review process: priority ordering, what to block on, how to give actionable feedback
+description: "General code review process: priority ordering, what to block on, how to give actionable feedback"
 ---
 
 # Code Review — General
