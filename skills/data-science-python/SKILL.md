@@ -1,6 +1,6 @@
 ---
 name: data-science-python
-description: Python data science: notebook structure, data validation, reproducibility, and model documentation
+description: "Python data science: notebook structure, data validation, reproducibility, and model documentation"
 ---
 
 # Data Science — Python

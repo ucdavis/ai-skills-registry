@@ -1,6 +1,6 @@
 ---
 name: security-general
-description: Security checklist: OWASP top 10, secret scanning, input validation, and auth patterns
+description: "Security checklist: OWASP top 10, secret scanning, input validation, and auth patterns"
 ---
 
 # Security Checklist

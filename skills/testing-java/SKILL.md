@@ -1,6 +1,6 @@
 ---
 name: testing-java
-description: Java testing with JUnit 5 and Mockito: test lifecycle, mocking, and integration test patterns
+description: "Java testing with JUnit 5 and Mockito: test lifecycle, mocking, and integration test patterns"
 ---
 
 # Testing — Java

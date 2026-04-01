@@ -1,6 +1,6 @@
 ---
 name: testing-typescript
-description: TypeScript testing with Vitest/Jest: file structure, mocking strategy, async patterns, and coverage targets
+description: "TypeScript testing with Vitest/Jest: file structure, mocking strategy, async patterns, and coverage targets"
 ---
 
 # Testing — TypeScript

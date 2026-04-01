@@ -1,6 +1,6 @@
 ---
 name: architecture-general
-description: Architecture decisions: layering, design patterns, microservices trade-offs, and domain-driven design
+description: "Architecture decisions: layering, design patterns, microservices trade-offs, and domain-driven design"
 ---
 
 # Architecture — General

@@ -1,6 +1,6 @@
 ---
 name: git-workflow-general
-description: Git workflow: branch naming, conventional commits, PR conventions, and merge strategies
+description: "Git workflow: branch naming, conventional commits, PR conventions, and merge strategies"
 ---
 
 # Git Workflow

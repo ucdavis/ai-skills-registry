@@ -1,6 +1,6 @@
 ---
 name: testing-general
-description: Language-agnostic testing principles: boundary assertions, null checks, and behavior-driven test naming
+description: "Language-agnostic testing principles: boundary assertions, null checks, and behavior-driven test naming"
 ---
 
 # Testing — General
