@@ -1,4 +1,3 @@
-import axios from "axios";
 import chalk from "chalk";
 import ora from "ora";
 import fs from "fs";
@@ -65,12 +64,13 @@ export async function fetchRegistryIndex(): Promise<RegistryIndex> {
   if (envUrl) {
     const spinner = ora("Fetching registry index...").start();
     try {
-      const response = await axios.get<RegistryIndex>(envUrl);
+      const response = await fetch(envUrl);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
       spinner.succeed("Registry index fetched.");
-      return response.data;
+      return (await response.json()) as RegistryIndex;
     } catch (error) {
       spinner.fail("Failed to fetch registry index.");
-      if (axios.isAxiosError(error)) console.error(chalk.red(error.message));
+      console.error(chalk.red((error as Error).message));
       process.exit(1);
     }
   }
@@ -80,12 +80,13 @@ export async function fetchRegistryIndex(): Promise<RegistryIndex> {
 
   const spinner = ora("Fetching registry index...").start();
   try {
-    const response = await axios.get<RegistryIndex>(REMOTE_REGISTRY_URL);
+    const response = await fetch(REMOTE_REGISTRY_URL);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
     spinner.succeed("Registry index fetched.");
-    return response.data;
+    return (await response.json()) as RegistryIndex;
   } catch (error) {
     spinner.fail("Failed to fetch registry index.");
-    if (axios.isAxiosError(error)) console.error(chalk.red(error.message));
+    console.error(chalk.red((error as Error).message));
     process.exit(1);
   }
 }
@@ -94,8 +95,9 @@ export async function fetchAgentsConfig(): Promise<AgentsConfig> {
   const envUrl = process.env.AI_SKILLS_AGENTS_URL;
   if (envUrl) {
     try {
-      const response = await axios.get<AgentsConfig>(envUrl);
-      return response.data;
+      const response = await fetch(envUrl);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return (await response.json()) as AgentsConfig;
     } catch {
       /* fall through */
     }
@@ -105,8 +107,9 @@ export async function fetchAgentsConfig(): Promise<AgentsConfig> {
   if (local) return local;
 
   try {
-    const response = await axios.get<AgentsConfig>(REMOTE_AGENTS_URL);
-    return response.data;
+    const response = await fetch(REMOTE_AGENTS_URL);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return (await response.json()) as AgentsConfig;
   } catch {
     return { agents: {} };
   }

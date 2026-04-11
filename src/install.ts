@@ -1,4 +1,3 @@
-import axios from "axios";
 import chalk from "chalk";
 import ora from "ora";
 import fs from "fs";
@@ -39,8 +38,9 @@ async function downloadSkillFiles(
     }
     const baseUrl = process.env.AI_SKILLS_REPO_URL || REMOTE_BASE_URL;
     const fileUrl = `${baseUrl}/skills/${skillDir}/${file}`;
-    const response = await axios.get<string>(fileUrl, { responseType: "text" });
-    contents[file] = response.data;
+    const response = await fetch(fileUrl);
+    if (!response.ok) throw new Error(`HTTP ${response.status}: ${fileUrl}`);
+    contents[file] = await response.text();
   }
   return contents;
 }
@@ -176,11 +176,7 @@ export async function installSkill(
     }
   } catch (error) {
     spinner.fail(chalk.red(`Failed to install '${skill.id}'.`));
-    if (axios.isAxiosError(error)) {
-      console.error(chalk.red(error.message));
-    } else {
-      console.error(error);
-    }
+    console.error(error);
     process.exit(1);
   }
 }
