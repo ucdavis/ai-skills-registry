@@ -39,32 +39,29 @@ This workspace exclusively uses `uv` for Python package management, dependency r
 | Compile a lockfile | `uv pip compile requirements.in -o requirements.txt` |
 | Initialize a new project | `uv init` |
 
-## Examples
+## Common Workflows
 
-### Adding a dependency
+### New project from scratch
 ```bash
-# Good
-uv add requests
-
-# Bad — never do this
-pip install requests
-```
-
-### Creating a virtual environment
-```bash
-# Good
-uv venv .venv
-
-# Bad — never do this
-python -m venv .venv
-```
-
-### Running a script
-```bash
+uv init my-project
+cd my-project
+uv add requests fastapi
+uv run python -c "import requests; print('ok')"   # verify deps installed
 uv run main.py
 ```
 
-### Syncing dependencies after cloning a project
+### Clone and set up an existing project
 ```bash
+git clone <repo-url> && cd <repo>
 uv sync
+uv pip list              # verify pinned dependencies resolved
+uv run main.py
+```
+
+### Migrate from pip to uv
+```bash
+uv venv .venv
+uv pip install -r requirements.txt
+uv pip list                                          # verify all packages present
+uv pip compile requirements.in -o requirements.txt   # regenerate lockfile
 ```
