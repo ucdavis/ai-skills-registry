@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
+### Added
+- Added `x-twitter-scraper-general` skill for Xquik X (Twitter) data, MCP, webhook, extraction, and confirmed posting workflows.
+
 ## [1.4.2] - 2026-04-11
 
 ### Changed
@@ -93,4 +96,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release of `ai-skills-registry`.
 - Core CLI functionality (`list`, `search`, `info`, `install`, `install-all`).
 - Provided a starter set of skills spanning multiple categories.
-

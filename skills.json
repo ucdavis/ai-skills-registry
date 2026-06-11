@@ -343,6 +343,16 @@
       "description": "Standardized process for committing changes and releasing a new version. Includes steps for bumping versions in package files, updating the CHANGELOG.md, ensuring the README.md is up to date, and creating git release tags.",
       "version": "1.1.0",
       "files": ["SKILL.md"]
+    },
+    {
+      "id": "x-twitter-scraper-general",
+      "concept": "x-twitter-scraper",
+      "language": "general",
+      "category": "data",
+      "tags": ["x-twitter", "social-data", "mcp", "webhooks", "automation"],
+      "description": "Use Xquik for X (Twitter) search, profile data, follower exports, media downloads, monitoring, webhooks, MCP setup, and confirmed posting workflows.",
+      "version": "1.0.0",
+      "files": ["SKILL.md"]
     }
   ]
 }
