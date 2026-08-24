@@ -178,7 +178,7 @@ Skill files use YAML frontmatter matching the manifest entry, followed by the ac
 
 <!-- START_SKILLS_TABLE -->
 | ID | Category | Tags |
-|----|-------|------|
+|----|----------|------|
 | `testing-general` | engineering | unit-testing, boundaries, null-safety, tdd |
 | `testing-typescript` | engineering | vitest, jest, tdd, mocking, coverage |
 | `testing-python` | engineering | pytest, unittest, mocking, fixtures, tdd |
@@ -207,6 +207,7 @@ Skill files use YAML frontmatter matching the manifest entry, followed by the ac
 | `assistant-ucd-mobile` | engineering | assistant, coding, expo, react-native, typescript, nativewind |
 | `git-workflow-monorepo` | engineering | git, monorepo, branching, versioning, semver, commits, pr, merge-conflicts |
 | `git-workflow-release` | engineering | git, release, versioning, changelog, semver |
+| `hol-guard-general` | security | hol-guard, ai-security, agent-security, tool-policy, mcp, supply-chain |
 <!-- END_SKILLS_TABLE -->
 
 ---
