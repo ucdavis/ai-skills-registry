@@ -178,7 +178,7 @@ Skill files use YAML frontmatter matching the manifest entry, followed by the ac
 
 <!-- START_SKILLS_TABLE -->
 | ID | Category | Tags |
-|----|----------|------|
+|----|-------|------|
 | `testing-general` | engineering | unit-testing, boundaries, null-safety, tdd |
 | `testing-typescript` | engineering | vitest, jest, tdd, mocking, coverage |
 | `testing-python` | engineering | pytest, unittest, mocking, fixtures, tdd |
