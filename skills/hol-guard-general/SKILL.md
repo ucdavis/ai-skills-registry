@@ -21,13 +21,14 @@ Use HOL Guard when an AI coding harness or agent should be protected before tool
 Check for the runtime first:
 
 ```bash
-command -v hol-guard
+hol-guard --version
 ```
 
 If it is missing and the user wants runtime protection, install it in an isolated environment:
 
 ```bash
 pipx install hol-guard
+hol-guard --version
 ```
 
 Then inspect the local environment:
@@ -124,13 +125,14 @@ hol-guard sync
 The scanner is distributed separately from the HOL Guard runtime. Check it independently:
 
 ```bash
-command -v plugin-scanner
+plugin-scanner --version
 ```
 
 If scanning is requested and it is missing:
 
 ```bash
 pipx install plugin-scanner
+plugin-scanner --version
 ```
 
 Scan a repository or package root:
