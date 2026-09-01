@@ -343,6 +343,16 @@
       "description": "Standardized process for committing changes and releasing a new version. Includes steps for bumping versions in package files, updating the CHANGELOG.md, ensuring the README.md is up to date, and creating git release tags.",
       "version": "1.1.0",
       "files": ["SKILL.md"]
+    },
+    {
+      "id": "hol-guard-general",
+      "concept": "hol-guard",
+      "language": "general",
+      "category": "security",
+      "tags": ["hol-guard", "ai-security", "agent-security", "tool-policy", "mcp", "supply-chain"],
+      "description": "Protect local AI coding harnesses with HOL Guard, review approvals and receipts, and scan agent plugins, skills, MCP servers, and packages before release.",
+      "version": "1.0.2",
+      "files": ["SKILL.md"]
     }
   ]
 }

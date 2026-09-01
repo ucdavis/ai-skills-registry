@@ -207,6 +207,7 @@ Skill files use YAML frontmatter matching the manifest entry, followed by the ac
 | `assistant-ucd-mobile` | engineering | assistant, coding, expo, react-native, typescript, nativewind |
 | `git-workflow-monorepo` | engineering | git, monorepo, branching, versioning, semver, commits, pr, merge-conflicts |
 | `git-workflow-release` | engineering | git, release, versioning, changelog, semver |
+| `hol-guard-general` | security | hol-guard, ai-security, agent-security, tool-policy, mcp, supply-chain |
 <!-- END_SKILLS_TABLE -->
 
 ---

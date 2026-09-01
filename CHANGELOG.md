@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
+### Added
+- Added `hol-guard-general` skill for installing and operating HOL Guard runtime protection, approvals/evidence workflows, and plugin/package scanning.
+
+### Fixed
+- Made the `hol-guard-general` CLI availability checks portable by probing `hol-guard --version` and `plugin-scanner --version` directly instead of relying on POSIX-only `command -v`.
+- Corrected the HOL Guard approval URL command to require the pending request ID (`hol-guard approvals open <request-id>`).
+
 ## [1.4.2] - 2026-04-11
 
 ### Changed
