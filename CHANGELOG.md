@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Made the `hol-guard-general` CLI availability checks portable by probing `hol-guard --version` and `plugin-scanner --version` directly instead of relying on POSIX-only `command -v`.
+- Corrected the HOL Guard approval URL command to require the pending request ID (`hol-guard approvals open <request-id>`).
 
 ## [1.4.2] - 2026-04-11
 
