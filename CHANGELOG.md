@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
+### Added
+- Added the product-design-harness/general skill with its complete 91-file source folder and original MIT notice; the entry name adds -general to match the registry directory contract.
+
 ## [1.4.2] - 2026-04-11
 
 ### Changed
